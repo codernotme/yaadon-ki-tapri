@@ -1,4 +1,4 @@
-# 📻 Nukkad Radio — codernotme.studio
+# 📻 Yaadon ki tapri — codernotme.studio
 
 [![Next.js](https://img.shields.io/badge/Next.js-15%2B-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
@@ -29,20 +29,23 @@ A nostalgic 90s–2000s Indian pop-culture music player built for those who grew
 
 ## 🖼️ Lively Wallpaper Integration Guide
 
-You can turn Nukkad Radio into an animated, music-playing live desktop wallpaper for Windows using **[Lively Wallpaper](https://rocksdanister.github.io/lively/)**.
+You can turn Yaadon ki tapri into an animated, music-playing live desktop wallpaper for Windows using **[Lively Wallpaper](https://rocksdanister.github.io/lively/)**.
 
 ### Step 1: Install Lively Wallpaper
+
 Download and install Lively Wallpaper (Free & Open Source) from the [Microsoft Store](https://apps.microsoft.com/detail/9ntm2qc6qws7) or GitHub.
 
-### Step 2: Add Nukkad Radio
+### Step 2: Add Yaadon ki tapri
+
 1. Open **Lively Wallpaper**.
 2. Click the **`+ Add Wallpaper`** button in the top right corner.
 3. In the **Enter URL** field, paste your local or hosted wallpaper endpoint:
    - **Local Dev:** `http://localhost:3000/wallpaper`
    - **Production:** `https://music.codernotme.studio/wallpaper`
-4. Click **`→` (Next)**, give it a title (e.g. `Nukkad Radio`), and hit **OK**.
+4. Click **`→` (Next)**, give it a title (e.g. `Yaadon ki tapri`), and hit **OK**.
 
 ### Step 3: Configure Audio Settings
+
 1. Go to Lively **Settings ⚙️ -> Audio**.
 2. Set **Volume** to your desired background listening level.
 3. Enable **"Mute wallpaper when another application is playing audio"** (recommended for gaming/work).
@@ -53,9 +56,10 @@ Download and install Lively Wallpaper (Free & Open Source) from the [Microsoft S
 
 ## 🧩 Embed Widget Guide
 
-Add Nukkad Radio as a floating music widget on your portfolio or personal website!
+Add Yaadon ki tapri as a floating music widget on your portfolio or personal website!
 
 ### Simple Iframe Embed
+
 Paste this snippet before the `</body>` tag of your website:
 
 ```html
@@ -81,17 +85,20 @@ Paste this snippet before the `</body>` tag of your website:
 ## 🚀 Local Development
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/codernotme/nukkad-cafe.git
    cd nukkad-cafe
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Start development server:**
+
    ```bash
    npm run dev
    ```
@@ -103,7 +110,7 @@ Paste this snippet before the `</body>` tag of your website:
 
 ## ☕ Support & Socials
 
-If you enjoy listening to Nukkad Radio while working or chilling, consider supporting the project!
+If you enjoy listening to Yaadon ki tapri while working or chilling, consider supporting the project!
 
 - ☕ **Buy Me A Coffee:** [buymeacoffee.com/codernotme](https://buymeacoffee.com/codernotme)
 - 🌐 **Portfolio:** [codernotme.studio](https://codernotme.studio)

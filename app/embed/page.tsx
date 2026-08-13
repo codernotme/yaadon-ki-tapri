@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { usePlayer, Song } from "@/context/PlayerContext";
-import { Play, Pause, SkipForward, SkipBack, Music2, Radio } from "lucide-react";
+import { Play, Pause, SkipForward, SkipBack } from "lucide-react";
 import clsx from "clsx";
 import songsData from "@/data/songs.json";
 
@@ -23,11 +23,11 @@ export default function EmbedWidget() {
       <div className="fixed bottom-4 right-4 z-50">
         <button 
           onClick={handleToggleWidget}
-          className="w-16 h-16 bg-brand-red border-2 border-brand-black rounded-full shadow-[4px_4px_0_0_#2B2118] flex items-center justify-center hover:scale-110 active:scale-95 transition-transform group cursor-pointer"
+          className="w-16 h-16 bg-brand-red border-2 border-brand-black rounded-full shadow-[4px_4px_0_0_#2B2118] flex items-center justify-center hover:scale-110 active:scale-95 transition-transform group cursor-pointer overflow-hidden p-1"
           title="Open यादों की टपरी Radio Widget"
         >
-          <div className={clsx("w-10 h-10 bg-brand-cream rounded-full border-2 border-brand-black flex items-center justify-center shadow-inner", isPlaying ? "animate-spin-slow" : "")}>
-            <Radio size={20} className="text-brand-red fill-current group-hover:scale-110 transition-transform" />
+          <div className={clsx("w-full h-full rounded-full border-2 border-brand-yellow overflow-hidden flex items-center justify-center shadow-inner bg-black", isPlaying ? "animate-spin-slow" : "")}>
+            <img src="/embedd.png" alt="Radio Disc" className="w-full h-full object-cover" />
           </div>
         </button>
       </div>
@@ -39,8 +39,8 @@ export default function EmbedWidget() {
       {/* Header */}
       <div className="flex justify-between items-center border-b border-white/10 pb-2.5">
         <div className="flex items-center gap-2.5">
-          <div className={clsx("w-8 h-8 rounded-full bg-brand-red border border-white/20 flex items-center justify-center", isPlaying ? "animate-spin-slow" : "")}>
-            <Radio size={14} className="text-brand-cream" />
+          <div className={clsx("w-9 h-9 rounded-full border border-brand-yellow/80 overflow-hidden flex items-center justify-center bg-black", isPlaying ? "animate-spin-slow" : "")}>
+            <img src="/embedd.png" alt="Yaadon Ki Tapri Disc" className="w-full h-full object-cover" />
           </div>
           <div>
             <h3 className="font-hindi text-lg font-bold leading-tight text-brand-cream">
