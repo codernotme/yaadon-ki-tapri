@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { usePlayer } from "@/context/PlayerContext";
-import { Play, Pause, SkipForward, SkipBack, Music2 } from "lucide-react";
+import { usePlayer, Song } from "@/context/PlayerContext";
+import { Play, Pause, SkipForward, SkipBack, Music2, Radio } from "lucide-react";
 import clsx from "clsx";
 import songsData from "@/data/songs.json";
 
@@ -10,18 +10,24 @@ export default function EmbedWidget() {
   const [expanded, setExpanded] = useState(false);
   const { currentSong, isPlaying, togglePlay, nextSong, prevSong, playSong } = usePlayer();
 
+  const handleToggleWidget = () => {
+    setExpanded(!expanded);
+    if (!currentSong && songsData && songsData.length > 0) {
+      const typedSongsData = songsData as Song[];
+      playSong(typedSongsData[0], typedSongsData);
+    }
+  };
+
   if (!expanded) {
     return (
       <div className="fixed bottom-4 right-4 z-50">
         <button 
-          onClick={() => {
-            setExpanded(true);
-            if (!currentSong) playSong(songsData[0], songsData);
-          }}
-          className="w-16 h-16 bg-brand-cream border-2 border-brand-black rounded-full shadow-[4px_4px_0_0_#2B2118] flex items-center justify-center hover:scale-105 transition-transform"
+          onClick={handleToggleWidget}
+          className="w-16 h-16 bg-brand-red border-2 border-brand-black rounded-full shadow-[4px_4px_0_0_#2B2118] flex items-center justify-center hover:scale-110 active:scale-95 transition-transform group cursor-pointer"
+          title="Open यादों की टपरी Radio Widget"
         >
-          <div className={clsx("w-10 h-10 bg-brand-teal rounded-full border-2 border-brand-black flex items-center justify-center", isPlaying ? "animate-spin-slow" : "")}>
-            <Music2 size={20} className="text-brand-cream fill-brand-cream" />
+          <div className={clsx("w-10 h-10 bg-brand-cream rounded-full border-2 border-brand-black flex items-center justify-center shadow-inner", isPlaying ? "animate-spin-slow" : "")}>
+            <Radio size={20} className="text-brand-red fill-current group-hover:scale-110 transition-transform" />
           </div>
         </button>
       </div>
@@ -29,48 +35,63 @@ export default function EmbedWidget() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 w-full max-w-sm bg-brand-cream border-2 border-brand-black rounded-xl shadow-[6px_6px_0_0_#2B2118] p-4 flex flex-col gap-4">
-      <div className="flex justify-between items-start">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 flex-shrink-0 bg-brand-teal rounded-md border-2 border-brand-black flex items-center justify-center overflow-hidden">
-            <div className={clsx("w-8 h-8 rounded-full border-2 border-brand-black flex items-center justify-center bg-brand-cream", isPlaying ? "animate-spin-slow" : "")}>
-              <div className="w-2 h-2 rounded-full bg-brand-black"></div>
-            </div>
+    <div className="fixed bottom-4 right-4 z-50 w-[340px] bg-[#151210]/95 backdrop-blur-2xl border border-white/20 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] p-4 flex flex-col gap-3 text-white">
+      {/* Header */}
+      <div className="flex justify-between items-center border-b border-white/10 pb-2.5">
+        <div className="flex items-center gap-2.5">
+          <div className={clsx("w-8 h-8 rounded-full bg-brand-red border border-white/20 flex items-center justify-center", isPlaying ? "animate-spin-slow" : "")}>
+            <Radio size={14} className="text-brand-cream" />
           </div>
-          <div className="flex-1 min-w-0 pr-4">
-            <h3 className="font-sans text-lg font-bold truncate leading-tight text-brand-black">
-              {currentSong?.title || "Nukkad Radio"}
+          <div>
+            <h3 className="font-hindi text-lg font-bold leading-tight text-brand-cream">
+              यादों की टपरी
             </h3>
-            <p className="font-mono text-xs text-brand-gray truncate">
-              {currentSong?.artist || "tuning in..."}
+            <p className="font-mono text-[10px] text-white/60 uppercase tracking-wider">
+              90s-20s RETRO RADIO
             </p>
           </div>
         </div>
-        <button onClick={() => setExpanded(false)} className="text-brand-gray hover:text-brand-black p-1">
+
+        <button 
+          onClick={() => setExpanded(false)} 
+          className="text-white/60 hover:text-white text-xl leading-none px-2 py-1 rounded-md hover:bg-white/10 transition-colors"
+          title="Minimize Widget"
+        >
           &times;
         </button>
       </div>
 
-      <div className="flex items-center justify-center gap-4 py-2">
-        <button onClick={prevSong} className="p-2 hover:bg-brand-yellow/20 rounded-full transition-colors active:scale-95">
-          <SkipBack size={24} className="fill-brand-black" />
+      {/* Track Info */}
+      <div className="bg-white/5 p-2.5 rounded-xl border border-white/10">
+        <h4 className="font-hindi text-base font-bold text-white truncate">
+          {currentSong?.title || "Tuning in..."}
+        </h4>
+        <p className="font-mono text-xs text-white/60 truncate mt-0.5">
+          {currentSong?.artist || "Yaadon Ki Tapri"}
+        </p>
+      </div>
+
+      {/* Controls */}
+      <div className="flex items-center justify-center gap-4 py-1">
+        <button onClick={prevSong} className="p-2 text-white/80 hover:text-white hover:scale-110 active:scale-95 transition-all">
+          <SkipBack size={20} className="fill-current" />
         </button>
         <button 
           onClick={togglePlay}
-          className="p-4 bg-brand-red rounded-full border-2 border-brand-black shadow-[2px_2px_0_0_#2B2118] hover:translate-y-[1px] hover:shadow-[1px_1px_0_0_#2B2118] transition-all active:shadow-none active:translate-y-[2px]"
+          className="p-3 bg-brand-cream text-brand-black rounded-full hover:scale-110 hover:bg-white active:scale-95 transition-all shadow-md"
         >
-          {isPlaying ? <Pause size={24} className="text-brand-cream fill-brand-cream" /> : <Play size={24} className="text-brand-cream fill-brand-cream ml-1" />}
+          {isPlaying ? <Pause size={20} className="fill-current" /> : <Play size={20} className="fill-current ml-0.5" />}
         </button>
-        <button onClick={nextSong} className="p-2 hover:bg-brand-yellow/20 rounded-full transition-colors active:scale-95">
-          <SkipForward size={24} className="fill-brand-black" />
+        <button onClick={nextSong} className="p-2 text-white/80 hover:text-white hover:scale-110 active:scale-95 transition-all">
+          <SkipForward size={20} className="fill-current" />
         </button>
       </div>
-      
+
       {/* Equalizer */}
       {isPlaying && (
-        <div className="h-2 flex items-end justify-center gap-[2px] opacity-20 pointer-events-none mt-2">
-           {[...Array(20)].map((_, i) => (
-             <div key={i} className={`w-1 bg-brand-black animate-eq animate-eq-delay-${(i % 4) + 1}`} style={{height: `${Math.random() * 100}%`}}></div>
+        <div className="h-2 flex items-end justify-center gap-[3px] opacity-30 pointer-events-none">
+           {[...Array(24)].map((_, i) => (
+             <div key={i} className={`w-1 bg-brand-cream rounded-full animate-eq animate-eq-delay-${(i % 4) + 1}`} style={{height: `${((i * 37) % 70) + 30}%`}}></div>
            ))}
         </div>
       )}

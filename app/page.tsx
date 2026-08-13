@@ -191,7 +191,6 @@ export default function Home() {
           transform: `translate(${mousePos.x * 0.4}px, ${mousePos.y * 0.4}px)`
         }}
       >
-
         {/* Hindi Title: यादों की टपरी */}
         <h1 className="font-hindi text-6xl sm:text-8xl lg:text-9xl text-brand-cream drop-shadow-[6px_6px_0_#B5533C] mb-2 tracking-wide leading-none">
           यादों की टपरी

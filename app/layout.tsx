@@ -34,9 +34,10 @@ export default function RootLayout({
   return (
     <html
       lang="hi"
+      suppressHydrationWarning
       className={`${yatraOne.variable} ${sniglet.variable} ${spaceMono.variable} h-full antialiased font-sans text-brand-black bg-brand-cream`}
     >
-      <body className="min-h-full flex flex-col noise-bg">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <PlayerProvider>
           {children}
         </PlayerProvider>

@@ -112,7 +112,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
     return `${m}:${s < 10 ? "0" : ""}${s}`;
   };
 
-  const showGlobalPlayer = pathname === "/" || pathname === "/browse";
+  const showGlobalPlayer = pathname === "/" || pathname === "/browse" || pathname === "/wallpaper";
 
   return (
     <PlayerContext.Provider value={{ currentSong, isPlaying, queue, playSong, togglePlay, nextSong, prevSong, setQueue }}>
@@ -126,7 +126,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
               : "fixed -bottom-96 -right-96 opacity-0 pointer-events-none w-0 h-0 overflow-hidden"
           )}
         >
-          {/* YouTube Video Container with Watermark Badge (Deluxe Saloon Inspired) */}
+          {/* YouTube Video Container with Watermark Badge */}
           <div className={clsx(
             "rounded-xl overflow-hidden flex-shrink-0 bg-black relative border border-white/20 shadow-inner group",
             showGlobalPlayer ? "w-36 md:w-44 h-24 md:h-28 pointer-events-none" : "w-0 h-0"

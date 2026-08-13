@@ -53,7 +53,7 @@ export function NowPlayingBar({ variant = "hero" }: { variant?: "hero" | "bottom
       {isPlaying && (
         <div className="absolute bottom-1 left-4 right-4 h-1 flex items-end justify-center gap-[2px] opacity-20 pointer-events-none">
            {[...Array(10)].map((_, i) => (
-             <div key={i} className={`w-1 bg-brand-black animate-eq animate-eq-delay-${(i % 4) + 1}`} style={{height: `${Math.random() * 100}%`}}></div>
+             <div key={i} className={`w-1 bg-brand-black animate-eq animate-eq-delay-${(i % 4) + 1}`} style={{height: `${((i * 37) % 70) + 30}%`}}></div>
            ))}
         </div>
       )}
