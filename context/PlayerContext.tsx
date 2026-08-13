@@ -192,23 +192,27 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
             "rounded-xl overflow-hidden flex-shrink-0 bg-black relative border border-white/20 shadow-inner group cursor-pointer",
             showGlobalPlayer ? "w-36 md:w-44 h-24 md:h-28" : "w-0 h-0"
           )}>
-            <YouTube
-              videoId={currentSong.youtubeId}
-              opts={{
-                height: showGlobalPlayer ? '240' : '10',
-                width: showGlobalPlayer ? '320' : '10',
-                playerVars: {
-                  autoplay: 1,
-                  controls: 0,
-                  disablekb: 1,
-                  fs: 0,
-                  modestbranding: 1,
-                },
-              }}
-              onReady={onReady}
-              onStateChange={onStateChange}
-              className={showGlobalPlayer ? "absolute -top-[65px] -left-[60px] pointer-events-none" : ""}
-            />
+            <div className="absolute inset-0 scale-125 origin-center pointer-events-none overflow-hidden">
+              <YouTube
+                videoId={currentSong.youtubeId}
+                opts={{
+                  height: showGlobalPlayer ? '260' : '10',
+                  width: showGlobalPlayer ? '350' : '10',
+                  playerVars: {
+                    autoplay: 1,
+                    controls: 0,
+                    disablekb: 1,
+                    fs: 0,
+                    modestbranding: 1,
+                    rel: 0,
+                    iv_load_policy: 3,
+                  },
+                }}
+                onReady={onReady}
+                onStateChange={onStateChange}
+                className={showGlobalPlayer ? "absolute -top-[70px] -left-[65px]" : ""}
+              />
+            </div>
 
             {/* Clickable CTA Link to YouTube */}
             <a
@@ -218,11 +222,11 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
               className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/0 group-hover:bg-black/50 transition-all cursor-pointer p-2"
               title={`Watch "${currentSong.title}" on YouTube`}
             >
-              <div className="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 bg-red-600 hover:bg-red-700 text-white font-mono text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-xl border border-white/20">
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 bg-red-600 hover:bg-red-700 text-white font-mono text-[10px] md:text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-xl border border-white/20 whitespace-nowrap">
                 <span className="text-white font-bold">▶</span> Watch on YouTube ↗
               </div>
 
-              <div className="absolute bottom-1.5 right-2 group-hover:opacity-0 transition-opacity bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-mono text-white/90 flex items-center gap-1 border border-white/10 z-10">
+              <div className="absolute bottom-1.5 right-2 group-hover:opacity-0 transition-opacity bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-mono text-white/90 flex items-center gap-1 border border-white/10 z-10 whitespace-nowrap">
                 <span className="text-red-500 font-bold">▶</span> YouTube
               </div>
             </a>
