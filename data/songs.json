@@ -1,102 +1,1514 @@
 [
   {
-    "id": "dooron-dooron",
-    "title": "Dooron Dooron",
-    "artist": "The Local Train",
-    "year": "2018",
-    "youtubeId": "L-FkL3D2Bqg",
-    "spotifyUrl": "https://open.spotify.com/track/6p5qR1c3q25m1pPZ9sHk6R",
-    "youtubeMusicUrl": "https://music.youtube.com/watch?v=L-FkL3D2Bqg",
-    "tags": ["Desi Energy"]
+    "id": "song-1",
+    "title": "Ajj Din Chadheya",
+    "artist": "Pritam, Rahat Fateh Ali Khan",
+    "year": "90s-20s",
+    "youtubeId": "IImcBEHuDRI",
+    "spotifyUrl": "https://open.spotify.com/search/Ajj%20Din%20Chadheya%20Pritam%2C%20Rahat%20Fateh%20Ali%20Khan",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Ajj%20Din%20Chadheya%20Pritam%2C%20Rahat%20Fateh%20Ali%20Khan",
+    "tags": [
+      "Dard"
+    ]
   },
   {
-    "id": "choo-lo",
-    "title": "Choo Lo",
-    "artist": "The Local Train",
-    "year": "2015",
-    "youtubeId": "s7-QO_rI2U0",
-    "spotifyUrl": "https://open.spotify.com/track/25q5X4XyN7xQZ5b5Dq7G1V",
-    "youtubeMusicUrl": "https://music.youtube.com/watch?v=s7-QO_rI2U0",
-    "tags": ["Dard", "Desi Energy"]
+    "id": "song-2",
+    "title": "Iss Tarah",
+    "artist": "Chaar Diwaari, Sonu Nigam",
+    "year": "90s-20s",
+    "youtubeId": "s4fYA_wkta8",
+    "spotifyUrl": "https://open.spotify.com/search/Iss%20Tarah%20Chaar%20Diwaari%2C%20Sonu%20Nigam",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Iss%20Tarah%20Chaar%20Diwaari%2C%20Sonu%20Nigam",
+    "tags": [
+      "Dard"
+    ]
   },
   {
-    "id": "friends-theme",
-    "title": "I'll Be There For You",
+    "id": "song-3",
+    "title": "Tere Liye",
+    "artist": "Atif Aslam, Shreya Ghoshal",
+    "year": "90s-20s",
+    "youtubeId": "1C2My_eQQN4",
+    "spotifyUrl": "https://open.spotify.com/search/Tere%20Liye%20Atif%20Aslam%2C%20Shreya%20Ghoshal",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Tere%20Liye%20Atif%20Aslam%2C%20Shreya%20Ghoshal",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-4",
+    "title": "Tose Naina Lage",
+    "artist": "Shilpa Rao",
+    "year": "90s-20s",
+    "youtubeId": "y41Dqcpzr-Y",
+    "spotifyUrl": "https://open.spotify.com/search/Tose%20Naina%20Lage%20Shilpa%20Rao",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Tose%20Naina%20Lage%20Shilpa%20Rao",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-5",
+    "title": "Tanha Dil",
+    "artist": "Shaan",
+    "year": "90s-20s",
+    "youtubeId": "QRsDk-JBs48",
+    "spotifyUrl": "https://open.spotify.com/search/Tanha%20Dil%20Shaan",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Tanha%20Dil%20Shaan",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-6",
+    "title": "Humdard",
+    "artist": "Arijit Singh, Mithoon",
+    "year": "90s-20s",
+    "youtubeId": "7tElHNHLSKY",
+    "spotifyUrl": "https://open.spotify.com/search/Humdard%20Arijit%20Singh%2C%20Mithoon",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Humdard%20Arijit%20Singh%2C%20Mithoon",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-7",
+    "title": "Khairiyat",
+    "artist": "Pritam, Arijit Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Khairiyat%20Pritam%2C%20Arijit%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Khairiyat%20Pritam%2C%20Arijit%20Singh",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-8",
+    "title": "Agar Tum Saath Ho",
+    "artist": "Alka Yagnik, Arijit Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Agar%20Tum%20Saath%20Ho%20Alka%20Yagnik%2C%20Arijit%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Agar%20Tum%20Saath%20Ho%20Alka%20Yagnik%2C%20Arijit%20Singh",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-9",
+    "title": "Woh Kisna Hai",
+    "artist": "Sukhwinder Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Woh%20Kisna%20Hai%20Sukhwinder%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Woh%20Kisna%20Hai%20Sukhwinder%20Singh",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-10",
+    "title": "Mera Mann Kehne Laga",
+    "artist": "Falak Shabbir",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Mera%20Mann%20Kehne%20Laga%20Falak%20Shabbir",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Mera%20Mann%20Kehne%20Laga%20Falak%20Shabbir",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-11",
+    "title": "Woh Ladki Hai Kahan",
+    "artist": "Shaan, Kavita Krishnamurthy",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Woh%20Ladki%20Hai%20Kahan%20Shaan%2C%20Kavita%20Krishnamurthy",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Woh%20Ladki%20Hai%20Kahan%20Shaan%2C%20Kavita%20Krishnamurthy",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-12",
+    "title": "He Ram He Ram",
+    "artist": "Jagjit Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/He%20Ram%20He%20Ram%20Jagjit%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=He%20Ram%20He%20Ram%20Jagjit%20Singh",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-13",
+    "title": "Tere Pyaar Mein",
+    "artist": "Pritam, Arijit Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Tere%20Pyaar%20Mein%20Pritam%2C%20Arijit%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Tere%20Pyaar%20Mein%20Pritam%2C%20Arijit%20Singh",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-14",
+    "title": "Love Me Thoda Aur",
+    "artist": "Pritam, Arijit Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Love%20Me%20Thoda%20Aur%20Pritam%2C%20Arijit%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Love%20Me%20Thoda%20Aur%20Pritam%2C%20Arijit%20Singh",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-15",
+    "title": "At My Worst",
+    "artist": "Pink Sweat$",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/At%20My%20Worst%20Pink%20Sweat%24",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=At%20My%20Worst%20Pink%20Sweat%24",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-16",
+    "title": "everything sucks",
+    "artist": "vaultboy",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/everything%20sucks%20vaultboy",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=everything%20sucks%20vaultboy",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-17",
+    "title": "Save Your Tears (with Ariana Grande)",
+    "artist": "The Weeknd",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Save%20Your%20Tears%20(with%20Ariana%20Grande)%20The%20Weeknd",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Save%20Your%20Tears%20(with%20Ariana%20Grande)%20The%20Weeknd",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-18",
+    "title": "Ranjha (From \"Shershaah\")",
+    "artist": "Jasleen Royal, B Praak",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Ranjha%20(From%20%22Shershaah%22)%20Jasleen%20Royal%2C%20B%20Praak",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Ranjha%20(From%20%22Shershaah%22)%20Jasleen%20Royal%2C%20B%20Praak",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-19",
+    "title": "Meri Kahani",
+    "artist": "Atif Aslam",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Meri%20Kahani%20Atif%20Aslam",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Meri%20Kahani%20Atif%20Aslam",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-20",
+    "title": "Dhan Te Nan",
+    "artist": "Sukhwinder Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Dhan%20Te%20Nan%20Sukhwinder%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Dhan%20Te%20Nan%20Sukhwinder%20Singh",
+    "tags": [
+      "Dard"
+    ]
+  },
+  {
+    "id": "song-21",
+    "title": "I'll Be There for You",
     "artist": "The Rembrandts",
-    "year": "1995",
-    "youtubeId": "q-9kPks0IfE",
-    "spotifyUrl": "https://open.spotify.com/track/4aVuWgvD0X63hcVNXW6OMj",
-    "youtubeMusicUrl": "https://music.youtube.com/watch?v=q-9kPks0IfE",
-    "tags": ["English Nostalgia"]
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/I'll%20Be%20There%20for%20You%20The%20Rembrandts",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=I'll%20Be%20There%20for%20You%20The%20Rembrandts",
+    "tags": [
+      "Dard"
+    ]
   },
   {
-    "id": "barsaat-ki-dhun",
-    "title": "Barsaat Ke Din Aaye",
-    "artist": "Kumar Sanu, Alka Yagnik",
-    "year": "2005",
-    "youtubeId": "uTz_J2XoH20",
-    "spotifyUrl": "https://open.spotify.com/track/6I5z3v8sW3Oq6iV2Lw0T9F",
-    "youtubeMusicUrl": "https://music.youtube.com/watch?v=uTz_J2XoH20",
-    "tags": ["Filmy Retro Mix"]
+    "id": "song-22",
+    "title": "By My Side",
+    "artist": "AP Dhillon",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/By%20My%20Side%20AP%20Dhillon",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=By%20My%20Side%20AP%20Dhillon",
+    "tags": [
+      "Desi Energy"
+    ]
   },
   {
-    "id": "kun-faya-kun",
+    "id": "song-23",
+    "title": "STFU",
+    "artist": "AP Dhillon, Shinda Kahlon",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/STFU%20AP%20Dhillon%2C%20Shinda%20Kahlon",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=STFU%20AP%20Dhillon%2C%20Shinda%20Kahlon",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-24",
+    "title": "Bairan",
+    "artist": "Banjaare",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Bairan%20Banjaare",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Bairan%20Banjaare",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-25",
+    "title": "Barsaat",
+    "artist": "Banjaare, Roni",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Barsaat%20Banjaare%2C%20Roni",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Barsaat%20Banjaare%2C%20Roni",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-26",
+    "title": "Wo Noor",
+    "artist": "AP Dhillon",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Wo%20Noor%20AP%20Dhillon",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Wo%20Noor%20AP%20Dhillon",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-27",
+    "title": "Dil Nu",
+    "artist": "AP Dhillon",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Dil%20Nu%20AP%20Dhillon",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Dil%20Nu%20AP%20Dhillon",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-28",
+    "title": "Summer High",
+    "artist": "AP Dhillon",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Summer%20High%20AP%20Dhillon",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Summer%20High%20AP%20Dhillon",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-29",
+    "title": "Players",
+    "artist": "Badshah, Karan Aujla",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Players%20Badshah%2C%20Karan%20Aujla",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Players%20Badshah%2C%20Karan%20Aujla",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-30",
+    "title": "Kinna Sona",
+    "artist": "Sunil Kamath, Mithoon",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Kinna%20Sona%20Sunil%20Kamath%2C%20Mithoon",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Kinna%20Sona%20Sunil%20Kamath%2C%20Mithoon",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-31",
+    "title": "Kinna Sona (From \"Marjaavaan\")",
+    "artist": "Meet Bros., Jubin Nautiyal",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Kinna%20Sona%20(From%20%22Marjaavaan%22)%20Meet%20Bros.%2C%20Jubin%20Nautiyal",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Kinna%20Sona%20(From%20%22Marjaavaan%22)%20Meet%20Bros.%2C%20Jubin%20Nautiyal",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-32",
+    "title": "Chak Glass",
+    "artist": "Imran Khan",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Chak%20Glass%20Imran%20Khan",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Chak%20Glass%20Imran%20Khan",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-33",
+    "title": "Amplifier",
+    "artist": "Imran Khan",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Amplifier%20Imran%20Khan",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Amplifier%20Imran%20Khan",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-34",
+    "title": "Ganpat",
+    "artist": "Mika Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Ganpat%20Mika%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Ganpat%20Mika%20Singh",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-35",
+    "title": "Jhak Maar Ke",
+    "artist": "Pritam, Neeraj Shridhar",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Jhak%20Maar%20Ke%20Pritam%2C%20Neeraj%20Shridhar",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Jhak%20Maar%20Ke%20Pritam%2C%20Neeraj%20Shridhar",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-36",
     "title": "Kun Faya Kun",
-    "artist": "A.R. Rahman, Javed Ali, Mohit Chauhan",
-    "year": "2011",
-    "youtubeId": "T94PHkuydcw",
-    "spotifyUrl": "https://open.spotify.com/track/7F8c0u6O998X3hUjB5N9H3",
-    "youtubeMusicUrl": "https://music.youtube.com/watch?v=T94PHkuydcw",
-    "tags": ["Bhakti Break"]
+    "artist": "A.R. Rahman, Javed Ali",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Kun%20Faya%20Kun%20A.R.%20Rahman%2C%20Javed%20Ali",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Kun%20Faya%20Kun%20A.R.%20Rahman%2C%20Javed%20Ali",
+    "tags": [
+      "Desi Energy"
+    ]
   },
   {
-    "id": "mitwa",
-    "title": "Mitwa",
-    "artist": "Shafqat Amanat Ali, Shankar Mahadevan, Caralisa Monteiro",
-    "year": "2006",
-    "youtubeId": "QkF3mP6D-qY",
-    "spotifyUrl": "https://open.spotify.com/track/4Wf8T2fX9O8v8aK3O7f8kO",
-    "youtubeMusicUrl": "https://music.youtube.com/watch?v=QkF3mP6D-qY",
-    "tags": ["Filmy Retro Mix"]
+    "id": "song-37",
+    "title": "Deewaana Deewaana",
+    "artist": "A.R. Rahman",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Deewaana%20Deewaana%20A.R.%20Rahman",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Deewaana%20Deewaana%20A.R.%20Rahman",
+    "tags": [
+      "Desi Energy"
+    ]
   },
   {
-    "id": "aankhon-mein-tera-hi-chehra",
-    "title": "Aankhon Mein Tera Hi Chehra",
-    "artist": "Aryans",
-    "year": "1999",
-    "youtubeId": "3oT5e_l_qG8",
-    "spotifyUrl": "https://open.spotify.com/track/5c8s1Q7tH0X7M5H9n9rW3k",
-    "youtubeMusicUrl": "https://music.youtube.com/watch?v=3oT5e_l_qG8",
-    "tags": ["Desi Energy"]
+    "id": "song-38",
+    "title": "Ibn-E-Batuta",
+    "artist": "Sukhwinder Singh, Mika Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Ibn-E-Batuta%20Sukhwinder%20Singh%2C%20Mika%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Ibn-E-Batuta%20Sukhwinder%20Singh%2C%20Mika%20Singh",
+    "tags": [
+      "Desi Energy"
+    ]
   },
   {
-    "id": "purani-jeans",
-    "title": "Purani Jeans",
-    "artist": "Ali Haider",
-    "year": "1993",
-    "youtubeId": "5V2qB7Xq0YQ",
-    "spotifyUrl": "https://open.spotify.com/track/0Xy8L4R9uG3m8Y6Q8D8X9T",
-    "youtubeMusicUrl": "https://music.youtube.com/watch?v=5V2qB7Xq0YQ",
-    "tags": ["Desi Energy", "Dard"]
+    "id": "song-39",
+    "title": "Sabsa Bada Rupaiya",
+    "artist": "Mehmood, Chetan, Sai",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Sabsa%20Bada%20Rupaiya%20Mehmood%2C%20Chetan%2C%20Sai",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Sabsa%20Bada%20Rupaiya%20Mehmood%2C%20Chetan%2C%20Sai",
+    "tags": [
+      "Desi Energy"
+    ]
   },
   {
-    "id": "somewhere-only-we-know",
-    "title": "Somewhere Only We Know",
-    "artist": "Keane",
-    "year": "2004",
-    "youtubeId": "Oextk-If8HQ",
-    "spotifyUrl": "https://open.spotify.com/track/0LLv48D78N8Wd3y9K8Hk2E",
-    "youtubeMusicUrl": "https://music.youtube.com/watch?v=Oextk-If8HQ",
-    "tags": ["English Nostalgia", "Dard"]
+    "id": "song-40",
+    "title": "Jugni",
+    "artist": "Panjabi MC",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Jugni%20Panjabi%20MC",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Jugni%20Panjabi%20MC",
+    "tags": [
+      "Desi Energy"
+    ]
   },
   {
-    "id": "tadap-tadap",
-    "title": "Tadap Tadap",
-    "artist": "KK, Dominique Cerejo",
-    "year": "1999",
-    "youtubeId": "B-B3A92Qe9w",
-    "spotifyUrl": "https://open.spotify.com/track/0m8h0mQ5qK8L7J3D9T7C2L",
-    "youtubeMusicUrl": "https://music.youtube.com/watch?v=B-B3A92Qe9w",
-    "tags": ["Dard", "Filmy Retro Mix"]
+    "id": "song-41",
+    "title": "Lover",
+    "artist": "Diljit Dosanjh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Lover%20Diljit%20Dosanjh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Lover%20Diljit%20Dosanjh",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-42",
+    "title": "BHALA",
+    "artist": "Vinay Katoch",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/BHALA%20Vinay%20Katoch",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=BHALA%20Vinay%20Katoch",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-43",
+    "title": "Gal Sun",
+    "artist": "Sabat Batin, Rackstar",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Gal%20Sun%20Sabat%20Batin%2C%20Rackstar",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Gal%20Sun%20Sabat%20Batin%2C%20Rackstar",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-44",
+    "title": "Leja",
+    "artist": "Lost Stories, JAI DHIR",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Leja%20Lost%20Stories%2C%20JAI%20DHIR",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Leja%20Lost%20Stories%2C%20JAI%20DHIR",
+    "tags": [
+      "Desi Energy"
+    ]
+  },
+  {
+    "id": "song-45",
+    "title": "Closer",
+    "artist": "The Chainsmokers, Halsey",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Closer%20The%20Chainsmokers%2C%20Halsey",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Closer%20The%20Chainsmokers%2C%20Halsey",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-46",
+    "title": "Bad Liar",
+    "artist": "Imagine Dragons",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Bad%20Liar%20Imagine%20Dragons",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Bad%20Liar%20Imagine%20Dragons",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-47",
+    "title": "Die With A Smile",
+    "artist": "Lady Gaga, Bruno Mars",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Die%20With%20A%20Smile%20Lady%20Gaga%2C%20Bruno%20Mars",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Die%20With%20A%20Smile%20Lady%20Gaga%2C%20Bruno%20Mars",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-48",
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Blinding%20Lights%20The%20Weeknd",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Blinding%20Lights%20The%20Weeknd",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-49",
+    "title": "Heat Waves",
+    "artist": "Glass Animals",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Heat%20Waves%20Glass%20Animals",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Heat%20Waves%20Glass%20Animals",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-50",
+    "title": "STAY (with Justin Bieber)",
+    "artist": "The Kid LAROI",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/STAY%20(with%20Justin%20Bieber)%20The%20Kid%20LAROI",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=STAY%20(with%20Justin%20Bieber)%20The%20Kid%20LAROI",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-51",
+    "title": "Beautiful Mistakes (feat. Megan Thee Stallion)",
+    "artist": "Maroon 5",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Beautiful%20Mistakes%20(feat.%20Megan%20Thee%20Stallion)%20Maroon%205",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Beautiful%20Mistakes%20(feat.%20Megan%20Thee%20Stallion)%20Maroon%205",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-52",
+    "title": "Lost",
+    "artist": "Maroon 5",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Lost%20Maroon%205",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Lost%20Maroon%205",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-53",
+    "title": "Nobody's Love",
+    "artist": "Maroon 5",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Nobody's%20Love%20Maroon%205",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Nobody's%20Love%20Maroon%205",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-54",
+    "title": "Kiss and Make Up",
+    "artist": "Dua Lipa, BLACKPINK",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Kiss%20and%20Make%20Up%20Dua%20Lipa%2C%20BLACKPINK",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Kiss%20and%20Make%20Up%20Dua%20Lipa%2C%20BLACKPINK",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-55",
+    "title": "OK Not To Be OK",
+    "artist": "Marshmello, Demi Lovato",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/OK%20Not%20To%20Be%20OK%20Marshmello%2C%20Demi%20Lovato",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=OK%20Not%20To%20Be%20OK%20Marshmello%2C%20Demi%20Lovato",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-56",
+    "title": "edamame",
+    "artist": "bbno$, Rich Brian",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/edamame%20bbno%24%2C%20Rich%20Brian",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=edamame%20bbno%24%2C%20Rich%20Brian",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-57",
+    "title": "Chosen (feat. Ty Dolla $ign)",
+    "artist": "Blxst, Tyga",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Chosen%20(feat.%20Ty%20Dolla%20%24ign)%20Blxst%2C%20Tyga",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Chosen%20(feat.%20Ty%20Dolla%20%24ign)%20Blxst%2C%20Tyga",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-58",
+    "title": "Into Your Arms (feat. Ava Max)",
+    "artist": "Witt Lowry",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Into%20Your%20Arms%20(feat.%20Ava%20Max)%20Witt%20Lowry",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Into%20Your%20Arms%20(feat.%20Ava%20Max)%20Witt%20Lowry",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-59",
+    "title": "Lalala",
+    "artist": "Y2K, bbno$",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Lalala%20Y2K%2C%20bbno%24",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Lalala%20Y2K%2C%20bbno%24",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-60",
+    "title": "What A Man Gotta Do",
+    "artist": "Jonas Brothers",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/What%20A%20Man%20Gotta%20Do%20Jonas%20Brothers",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=What%20A%20Man%20Gotta%20Do%20Jonas%20Brothers",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-61",
+    "title": "Weekend Vibe (feat. Desi Crew)",
+    "artist": "Jubël",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Weekend%20Vibe%20(feat.%20Desi%20Crew)%20Jub%C3%ABl",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Weekend%20Vibe%20(feat.%20Desi%20Crew)%20Jub%C3%ABl",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-62",
+    "title": "Leave Before You Love Me",
+    "artist": "Marshmello, Jonas Brothers",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Leave%20Before%20You%20Love%20Me%20Marshmello%2C%20Jonas%20Brothers",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Leave%20Before%20You%20Love%20Me%20Marshmello%2C%20Jonas%20Brothers",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-63",
+    "title": "nursery",
+    "artist": "bbno$, lentra",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/nursery%20bbno%24%2C%20lentra",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=nursery%20bbno%24%2C%20lentra",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-64",
+    "title": "love nwantiti (ah ah ah)",
+    "artist": "CKay",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/love%20nwantiti%20(ah%20ah%20ah)%20CKay",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=love%20nwantiti%20(ah%20ah%20ah)%20CKay",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-65",
+    "title": "love nwantiti (feat. Dj Yo! & AX'EL) - Remix",
+    "artist": "CKay",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/love%20nwantiti%20(feat.%20Dj%20Yo!%20%26%20AX'EL)%20-%20Remix%20CKay",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=love%20nwantiti%20(feat.%20Dj%20Yo!%20%26%20AX'EL)%20-%20Remix%20CKay",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-66",
+    "title": "Get Into It (Yuh)",
+    "artist": "Doja Cat",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Get%20Into%20It%20(Yuh)%20Doja%20Cat",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Get%20Into%20It%20(Yuh)%20Doja%20Cat",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-67",
+    "title": "Woman",
+    "artist": "Doja Cat",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Woman%20Doja%20Cat",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Woman%20Doja%20Cat",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-68",
+    "title": "Life Goes On",
+    "artist": "Oliver Tree",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Life%20Goes%20On%20Oliver%20Tree",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Life%20Goes%20On%20Oliver%20Tree",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-69",
+    "title": "Young Shahrukh",
+    "artist": "Tesher",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Young%20Shahrukh%20Tesher",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Young%20Shahrukh%20Tesher",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-70",
+    "title": "Clear - Shawn Wasabi Remix",
+    "artist": "Pusher, MOTHICA",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Clear%20-%20Shawn%20Wasabi%20Remix%20Pusher%2C%20MOTHICA",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Clear%20-%20Shawn%20Wasabi%20Remix%20Pusher%2C%20MOTHICA",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-71",
+    "title": "Heartbreak Anniversary",
+    "artist": "GIVĒON",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Heartbreak%20Anniversary%20GIV%C4%92ON",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Heartbreak%20Anniversary%20GIV%C4%92ON",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-72",
+    "title": "Problems",
+    "artist": "Anne-Marie",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Problems%20Anne-Marie",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Problems%20Anne-Marie",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-73",
+    "title": "The Lazy Song",
+    "artist": "Bruno Mars",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/The%20Lazy%20Song%20Bruno%20Mars",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=The%20Lazy%20Song%20Bruno%20Mars",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-74",
+    "title": "Cold",
+    "artist": "Alfie Castley",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Cold%20Alfie%20Castley",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Cold%20Alfie%20Castley",
+    "tags": [
+      "English Nostalgia"
+    ]
+  },
+  {
+    "id": "song-75",
+    "title": "Omkara",
+    "artist": "Vishal Bhardwaj",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Omkara%20Vishal%20Bhardwaj",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Omkara%20Vishal%20Bhardwaj",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-76",
+    "title": "Ghanchakkar Babu",
+    "artist": "Amit Trivedi",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Ghanchakkar%20Babu%20Amit%20Trivedi",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Ghanchakkar%20Babu%20Amit%20Trivedi",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-77",
+    "title": "Mera Yaar",
+    "artist": "Shankar-Ehsaan-Loy",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Mera%20Yaar%20Shankar-Ehsaan-Loy",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Mera%20Yaar%20Shankar-Ehsaan-Loy",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-78",
+    "title": "Gehra Hua (From \"Dhurandhar\")",
+    "artist": "Shashwat Sachdev",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Gehra%20Hua%20(From%20%22Dhurandhar%22)%20Shashwat%20Sachdev",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Gehra%20Hua%20(From%20%22Dhurandhar%22)%20Shashwat%20Sachdev",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-79",
+    "title": "Khoon Choos Le",
+    "artist": "Sachin-Jigar",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Khoon%20Choos%20Le%20Sachin-Jigar",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Khoon%20Choos%20Le%20Sachin-Jigar",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-80",
+    "title": "Dard Karaara",
+    "artist": "Anu Malik, Kumar Sanu",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Dard%20Karaara%20Anu%20Malik%2C%20Kumar%20Sanu",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Dard%20Karaara%20Anu%20Malik%2C%20Kumar%20Sanu",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-81",
+    "title": "Maskara (From \"Main Vaapas Aaunga\")",
+    "artist": "A.R. Rahman",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Maskara%20(From%20%22Main%20Vaapas%20Aaunga%22)%20A.R.%20Rahman",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Maskara%20(From%20%22Main%20Vaapas%20Aaunga%22)%20A.R.%20Rahman",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-82",
+    "title": "Aye Bachchu",
+    "artist": "A.R. Rahman",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Aye%20Bachchu%20A.R.%20Rahman",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Aye%20Bachchu%20A.R.%20Rahman",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-83",
+    "title": "Oye Boy Charlie",
+    "artist": "Vishal Bhardwaj",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Oye%20Boy%20Charlie%20Vishal%20Bhardwaj",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Oye%20Boy%20Charlie%20Vishal%20Bhardwaj",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-84",
+    "title": "Tai Tai Phis",
+    "artist": "Amit Trivedi",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Tai%20Tai%20Phis%20Amit%20Trivedi",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Tai%20Tai%20Phis%20Amit%20Trivedi",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-85",
+    "title": "Phatela Jeb - Aankhen / Soundtrack Version",
+    "artist": "Nitin Raikar",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Phatela%20Jeb%20-%20Aankhen%20%2F%20Soundtrack%20Version%20Nitin%20Raikar",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Phatela%20Jeb%20-%20Aankhen%20%2F%20Soundtrack%20Version%20Nitin%20Raikar",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-86",
+    "title": "Radha Kaise Na Jale",
+    "artist": "Asha Bhosle, Udit Narayan",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Radha%20Kaise%20Na%20Jale%20Asha%20Bhosle%2C%20Udit%20Narayan",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Radha%20Kaise%20Na%20Jale%20Asha%20Bhosle%2C%20Udit%20Narayan",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-87",
+    "title": "Bhaag D.K. Bose, Aandhi Aayi",
+    "artist": "Ram Sampath",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Bhaag%20D.K.%20Bose%2C%20Aandhi%20Aayi%20Ram%20Sampath",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Bhaag%20D.K.%20Bose%2C%20Aandhi%20Aayi%20Ram%20Sampath",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-88",
+    "title": "Illuminati - From \"Aavesham\"",
+    "artist": "Sushin Shyam, Dabzee",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Illuminati%20-%20From%20%22Aavesham%22%20Sushin%20Shyam%2C%20Dabzee",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Illuminati%20-%20From%20%22Aavesham%22%20Sushin%20Shyam%2C%20Dabzee",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-89",
+    "title": "Pehle Bhi Main",
+    "artist": "Vishal Mishra",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Pehle%20Bhi%20Main%20Vishal%20Mishra",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Pehle%20Bhi%20Main%20Vishal%20Mishra",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-90",
+    "title": "Matargashti",
+    "artist": "Mohit Chauhan",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Matargashti%20Mohit%20Chauhan",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Matargashti%20Mohit%20Chauhan",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-91",
+    "title": "Mere Liye Tum Kaafi Ho",
+    "artist": "Ayushmann Khurrana",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Mere%20Liye%20Tum%20Kaafi%20Ho%20Ayushmann%20Khurrana",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Mere%20Liye%20Tum%20Kaafi%20Ho%20Ayushmann%20Khurrana",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-92",
+    "title": "Masakali",
+    "artist": "Mohit Chauhan, A.R. Rahman",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Masakali%20Mohit%20Chauhan%2C%20A.R.%20Rahman",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Masakali%20Mohit%20Chauhan%2C%20A.R.%20Rahman",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-93",
+    "title": "Teri Aankhon Mein",
+    "artist": "Darshan Raval, Neha Kakkar",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Teri%20Aankhon%20Mein%20Darshan%20Raval%2C%20Neha%20Kakkar",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Teri%20Aankhon%20Mein%20Darshan%20Raval%2C%20Neha%20Kakkar",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-94",
+    "title": "Saibo",
+    "artist": "Sachin-Jigar, Shreya Ghoshal",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Saibo%20Sachin-Jigar%2C%20Shreya%20Ghoshal",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Saibo%20Sachin-Jigar%2C%20Shreya%20Ghoshal",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-95",
+    "title": "Chaap Tilak - From \"Dark 7 White\"",
+    "artist": "Sargam Jassu",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Chaap%20Tilak%20-%20From%20%22Dark%207%20White%22%20Sargam%20Jassu",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Chaap%20Tilak%20-%20From%20%22Dark%207%20White%22%20Sargam%20Jassu",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-96",
+    "title": "Shanivaar Raati (From \"Main Tera Hero\")",
+    "artist": "Arijit Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Shanivaar%20Raati%20(From%20%22Main%20Tera%20Hero%22)%20Arijit%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Shanivaar%20Raati%20(From%20%22Main%20Tera%20Hero%22)%20Arijit%20Singh",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-97",
+    "title": "Tooh",
+    "artist": "Vishal-Shekhar, Mika Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Tooh%20Vishal-Shekhar%2C%20Mika%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Tooh%20Vishal-Shekhar%2C%20Mika%20Singh",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-98",
+    "title": "Saun Da Mahina - Lofi",
+    "artist": "Javed Ali, L3AD",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Saun%20Da%20Mahina%20-%20Lofi%20Javed%20Ali%2C%20L3AD",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Saun%20Da%20Mahina%20-%20Lofi%20Javed%20Ali%2C%20L3AD",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-99",
+    "title": "Ek Din Teri Raahon",
+    "artist": "Javed Ali, Pritam",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Ek%20Din%20Teri%20Raahon%20Javed%20Ali%2C%20Pritam",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Ek%20Din%20Teri%20Raahon%20Javed%20Ali%2C%20Pritam",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-100",
+    "title": "Char Baj Gaye - Party Abhi Baaki Hai",
+    "artist": "Sachin-Jigar, Hard Kaur",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Char%20Baj%20Gaye%20-%20Party%20Abhi%20Baaki%20Hai%20Sachin-Jigar%2C%20Hard%20Kaur",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Char%20Baj%20Gaye%20-%20Party%20Abhi%20Baaki%20Hai%20Sachin-Jigar%2C%20Hard%20Kaur",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-101",
+    "title": "Alfaazo",
+    "artist": "Mitraz",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Alfaazo%20Mitraz",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Alfaazo%20Mitraz",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-102",
+    "title": "Dhundhala",
+    "artist": "Yashraj, Dropped Out",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Dhundhala%20Yashraj%2C%20Dropped%20Out",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Dhundhala%20Yashraj%2C%20Dropped%20Out",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-103",
+    "title": "Ve Haaniyaan",
+    "artist": "Danny, Avvy Sra, Sagar",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Ve%20Haaniyaan%20Danny%2C%20Avvy%20Sra%2C%20Sagar",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Ve%20Haaniyaan%20Danny%2C%20Avvy%20Sra%2C%20Sagar",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-104",
+    "title": "Banana Boat (Day-O)",
+    "artist": "Harry Belafonte",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Banana%20Boat%20(Day-O)%20Harry%20Belafonte",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Banana%20Boat%20(Day-O)%20Harry%20Belafonte",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-105",
+    "title": "Roz Roz",
+    "artist": "The Yellow Diary",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Roz%20Roz%20The%20Yellow%20Diary",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Roz%20Roz%20The%20Yellow%20Diary",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-106",
+    "title": "Par Chanaa De",
+    "artist": "Shilpa Rao, Noori",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Par%20Chanaa%20De%20Shilpa%20Rao%2C%20Noori",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Par%20Chanaa%20De%20Shilpa%20Rao%2C%20Noori",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-107",
+    "title": "Jogi",
+    "artist": "Aakanksha Sharma",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Jogi%20Aakanksha%20Sharma",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Jogi%20Aakanksha%20Sharma",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-108",
+    "title": "Kaantha",
+    "artist": "Masala Coffee, Sooraj Santhosh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Kaantha%20Masala%20Coffee%2C%20Sooraj%20Santhosh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Kaantha%20Masala%20Coffee%2C%20Sooraj%20Santhosh",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-109",
+    "title": "Thodi Si Daaru",
+    "artist": "AP Dhillon, Shreya Ghoshal",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Thodi%20Si%20Daaru%20AP%20Dhillon%2C%20Shreya%20Ghoshal",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Thodi%20Si%20Daaru%20AP%20Dhillon%2C%20Shreya%20Ghoshal",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-110",
+    "title": "Dooron Dooron",
+    "artist": "Paresh Pahuja, Shiv Tandon",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Dooron%20Dooron%20Paresh%20Pahuja%2C%20Shiv%20Tandon",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Dooron%20Dooron%20Paresh%20Pahuja%2C%20Shiv%20Tandon",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-111",
+    "title": "Dooron Dooron - Unplugged",
+    "artist": "Paresh Pahuja, Shiv Tandon",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Dooron%20Dooron%20-%20Unplugged%20Paresh%20Pahuja%2C%20Shiv%20Tandon",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Dooron%20Dooron%20-%20Unplugged%20Paresh%20Pahuja%2C%20Shiv%20Tandon",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-112",
+    "title": "Sawarne Lage",
+    "artist": "Tanishk Bagchi, Jubin Nautiyal",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Sawarne%20Lage%20Tanishk%20Bagchi%2C%20Jubin%20Nautiyal",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Sawarne%20Lage%20Tanishk%20Bagchi%2C%20Jubin%20Nautiyal",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-113",
+    "title": "Ilahi",
+    "artist": "Pritam, Arijit Singh",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Ilahi%20Pritam%2C%20Arijit%20Singh",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Ilahi%20Pritam%2C%20Arijit%20Singh",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-114",
+    "title": "Main Rang Sharbaton Ka",
+    "artist": "Atif Aslam",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Main%20Rang%20Sharbaton%20Ka%20Atif%20Aslam",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Main%20Rang%20Sharbaton%20Ka%20Atif%20Aslam",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-115",
+    "title": "Haaye Re",
+    "artist": "Banjaare, Swati Shukla",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Haaye%20Re%20Banjaare%2C%20Swati%20Shukla",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Haaye%20Re%20Banjaare%2C%20Swati%20Shukla",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-116",
+    "title": "Tu Jaane Na",
+    "artist": "Pritam, Atif Aslam",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Tu%20Jaane%20Na%20Pritam%2C%20Atif%20Aslam",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Tu%20Jaane%20Na%20Pritam%2C%20Atif%20Aslam",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-117",
+    "title": "Tu Jaana Na Piya",
+    "artist": "King",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Tu%20Jaana%20Na%20Piya%20King",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Tu%20Jaana%20Na%20Piya%20King",
+    "tags": [
+      "Filmy Retro Mix"
+    ]
+  },
+  {
+    "id": "song-118",
+    "title": "Hanuman Chalisa",
+    "artist": "Shankar Mahadevan",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Hanuman%20Chalisa%20Shankar%20Mahadevan",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Hanuman%20Chalisa%20Shankar%20Mahadevan",
+    "tags": [
+      "Bhakti Break"
+    ]
+  },
+  {
+    "id": "song-119",
+    "title": "Hanuman Chalisa",
+    "artist": "Vijay Prakash, Nandini Srikar",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Hanuman%20Chalisa%20Vijay%20Prakash%2C%20Nandini%20Srikar",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Hanuman%20Chalisa%20Vijay%20Prakash%2C%20Nandini%20Srikar",
+    "tags": [
+      "Bhakti Break"
+    ]
+  },
+  {
+    "id": "song-120",
+    "title": "Shiva Shiva Shankara",
+    "artist": "Shankar Mahadevan",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Shiva%20Shiva%20Shankara%20Shankar%20Mahadevan",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Shiva%20Shiva%20Shankara%20Shankar%20Mahadevan",
+    "tags": [
+      "Bhakti Break"
+    ]
+  },
+  {
+    "id": "song-121",
+    "title": "Dhishum Dhishum",
+    "artist": "Shravan, Tapas Relia",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Dhishum%20Dhishum%20Shravan%2C%20Tapas%20Relia",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Dhishum%20Dhishum%20Shravan%2C%20Tapas%20Relia",
+    "tags": [
+      "Bhakti Break"
+    ]
+  },
+  {
+    "id": "song-122",
+    "title": "Aasman Ko Chukar",
+    "artist": "Daler Mehndi",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Aasman%20Ko%20Chukar%20Daler%20Mehndi",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Aasman%20Ko%20Chukar%20Daler%20Mehndi",
+    "tags": [
+      "Bhakti Break"
+    ]
+  },
+  {
+    "id": "song-123",
+    "title": "Shiv Tandav Stotram (Har Har Shiv Shankar)",
+    "artist": "Sachet Tandon",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Shiv%20Tandav%20Stotram%20(Har%20Har%20Shiv%20Shankar)%20Sachet%20Tandon",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Shiv%20Tandav%20Stotram%20(Har%20Har%20Shiv%20Shankar)%20Sachet%20Tandon",
+    "tags": [
+      "Bhakti Break"
+    ]
+  },
+  {
+    "id": "song-124",
+    "title": "Shankara Re Shankara",
+    "artist": "Mehul Vyas, Adarsh Shinde",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Shankara%20Re%20Shankara%20Mehul%20Vyas%2C%20Adarsh%20Shinde",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Shankara%20Re%20Shankara%20Mehul%20Vyas%2C%20Adarsh%20Shinde",
+    "tags": [
+      "Bhakti Break"
+    ]
+  },
+  {
+    "id": "song-125",
+    "title": "Adi Anant Shiva",
+    "artist": "Aditya Sharma",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Adi%20Anant%20Shiva%20Aditya%20Sharma",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Adi%20Anant%20Shiva%20Aditya%20Sharma",
+    "tags": [
+      "Bhakti Break"
+    ]
+  },
+  {
+    "id": "song-126",
+    "title": "Kanha - Thumri",
+    "artist": "Sajid-Wajid, Rekha Bhardwaj",
+    "year": "90s-20s",
+    "youtubeId": "dQw4w9WgXcQ",
+    "spotifyUrl": "https://open.spotify.com/search/Kanha%20-%20Thumri%20Sajid-Wajid%2C%20Rekha%20Bhardwaj",
+    "youtubeMusicUrl": "https://music.youtube.com/search?q=Kanha%20-%20Thumri%20Sajid-Wajid%2C%20Rekha%20Bhardwaj",
+    "tags": [
+      "Bhakti Break"
+    ]
   }
 ]

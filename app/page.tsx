@@ -1,68 +1,71 @@
 "use client";
 
-import { useState } from "react";
-import { NowPlayingBar } from "@/components/ui/NowPlayingBar";
-import { RotationTabs } from "@/components/ui/RotationTabs";
-import { SongCard } from "@/components/ui/SongCard";
-import { usePlayer } from "@/context/PlayerContext";
+import Link from "next/link";
+import { usePlayer, Song } from "@/context/PlayerContext";
 import songsData from "@/data/songs.json";
+import { Play } from "lucide-react";
 
 export default function Home() {
-  const [activeRotation, setActiveRotation] = useState("All");
-  const { playSong } = usePlayer();
+  const { isPlaying, playSong } = usePlayer();
 
-  // Extract unique rotations
-  const rotations = Array.from(new Set(songsData.flatMap(song => song.tags)));
-
-  const filteredSongs = activeRotation === "All" 
-    ? songsData 
-    : songsData.filter(song => song.tags.includes(activeRotation));
+  const handleStart = () => {
+    // If the data is empty or not loaded yet, do nothing
+    if (!songsData || songsData.length === 0) return;
+    const typedSongsData = songsData as Song[];
+    // Pick a random song from the catalogue
+    const randomSong = typedSongsData[Math.floor(Math.random() * typedSongsData.length)];
+    playSong(randomSong, typedSongsData);
+  };
 
   return (
-    <div className="flex-1 flex flex-col relative">
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-12 px-6 flex flex-col items-center justify-center min-h-[50vh] overflow-hidden">
-        {/* Placeholder for Illustration Background */}
-        <div className="absolute inset-0 bg-brand-cream/50 pointer-events-none" />
-        
-        <div className="relative z-10 text-center mb-12">
-          <h1 className="font-sans text-6xl md:text-8xl text-brand-black drop-shadow-[4px_4px_0_#B5533C]">
-            Nukkad Radio
-          </h1>
-          <p className="font-sans text-xl md:text-2xl text-brand-black mt-4 drop-shadow-[1px_1px_0_#ffffff]">
-            the songs playing at every nukkad, every evening.
-          </p>
-        </div>
+    <div className="relative w-screen h-screen overflow-hidden bg-brand-cream">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-[20s] ease-in-out"
+        style={{ 
+          backgroundImage: "url('/background/bg_1.png')",
+          transform: isPlaying ? 'scale(1.05)' : 'scale(1)'
+        }}
+      />
+      
+      {/* Overlay to ensure text readability if needed */}
+      <div className="absolute inset-0 z-0 bg-black/10" />
+      
+      {/* Top Navigation */}
+      <nav className="absolute top-6 right-6 md:right-8 z-20 flex gap-4">
+        <Link 
+          href="/browse" 
+          className="bg-black/50 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-full font-mono text-sm hover:bg-black/70 hover:scale-105 transition-all shadow-lg"
+        >
+          Playlists
+        </Link>
+        <Link 
+          href="/browse?tab=All" 
+          className="bg-black/50 backdrop-blur-md border border-white/20 text-white px-5 py-2 rounded-full font-mono text-sm hover:bg-black/70 hover:scale-105 transition-all shadow-lg"
+        >
+          All Songs
+        </Link>
+      </nav>
 
-        <NowPlayingBar variant="hero" />
-      </section>
-
-      {/* Main Content */}
-      <main className="flex-1 w-full max-w-6xl mx-auto px-6 py-12">
-        <RotationTabs 
-          rotations={rotations} 
-          activeRotation={activeRotation} 
-          onSelect={setActiveRotation} 
-        />
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 mt-8">
-          {filteredSongs.map((song, idx) => (
-            <SongCard 
-              key={song.id} 
-              song={song} 
-              onPlay={() => playSong(song, filteredSongs)}
-              rotation={(idx % 3 === 0 ? 2 : idx % 2 === 0 ? -1.5 : 1)}
-            />
-          ))}
-        </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="w-full py-8 text-center border-t-2 border-brand-black/20 mt-12">
-        <p className="font-mono text-xs text-brand-gray px-4">
-          Streamed through YouTube — nothing downloaded, nothing hosted here.
+      {/* Center Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full pb-24 px-4 text-center">
+        <h1 className="font-sans text-6xl md:text-8xl lg:text-9xl text-brand-black drop-shadow-[4px_4px_0_#B5533C] mb-4 tracking-wide leading-none">
+          Nukkad Radio
+        </h1>
+        <p className="font-mono text-lg md:text-2xl text-brand-black font-semibold drop-shadow-[2px_2px_0_#ffffff] mb-12 max-w-2xl">
+          {isPlaying ? "the rotation right now is playing..." : "the songs playing at every nukkad, every evening."}
         </p>
-      </footer>
+        
+        {!isPlaying && (
+          <button 
+            onClick={handleStart}
+            className="group flex items-center gap-3 bg-brand-rust hover:bg-[#8A3F2C] text-white px-8 py-4 rounded-full font-sans text-xl shadow-[6px_6px_0_#1a1a1a] hover:translate-y-1 hover:shadow-[3px_3px_0_#1a1a1a] transition-all"
+          >
+            <Play className="fill-current group-hover:scale-110 transition-transform" size={24} />
+            Enter the Nukkad
+          </button>
+        )}
+      </div>
     </div>
   );
 }

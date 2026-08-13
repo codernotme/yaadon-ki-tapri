@@ -1,20 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { NowPlayingBar } from "@/components/ui/NowPlayingBar";
+import Link from "next/link";
 import { RotationTabs } from "@/components/ui/RotationTabs";
 import { SongCard } from "@/components/ui/SongCard";
-import { usePlayer } from "@/context/PlayerContext";
+import { usePlayer, Song } from "@/context/PlayerContext";
 import songsData from "@/data/songs.json";
+import { ArrowLeft } from "lucide-react";
 
 export default function Browse() {
   const [activeRotation, setActiveRotation] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
-  const { playSong, currentSong } = usePlayer();
+  const { playSong } = usePlayer();
 
-  const rotations = Array.from(new Set(songsData.flatMap(song => song.tags)));
+  const typedSongsData = songsData as Song[];
+  const rotations = Array.from(new Set(typedSongsData.flatMap(song => song.tags)));
 
-  const filteredSongs = songsData.filter(song => {
+  const filteredSongs = typedSongsData.filter(song => {
     const matchesRotation = activeRotation === "All" || song.tags.includes(activeRotation);
     const matchesSearch = song.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           song.artist.toLowerCase().includes(searchQuery.toLowerCase());
@@ -22,9 +24,12 @@ export default function Browse() {
   });
 
   return (
-    <div className="flex-1 flex flex-col relative pb-32">
+    <div className="flex-1 flex flex-col relative min-h-screen bg-brand-cream/90 backdrop-blur-md pb-32">
       <header className="pt-12 pb-6 px-6 max-w-6xl mx-auto w-full flex flex-col md:flex-row justify-between gap-6">
         <div>
+          <Link href="/" className="inline-flex items-center gap-2 font-mono text-sm text-brand-gray hover:text-brand-rust transition-colors mb-4">
+            <ArrowLeft size={16} /> Back to Nukkad
+          </Link>
           <h1 className="font-sans text-4xl text-brand-black font-bold">Browse Tapes</h1>
           <p className="font-mono text-brand-gray mt-2">Find a tape for the road.</p>
         </div>
@@ -65,8 +70,6 @@ export default function Browse() {
           </div>
         )}
       </main>
-
-      <NowPlayingBar variant="bottom" />
     </div>
   );
 }
