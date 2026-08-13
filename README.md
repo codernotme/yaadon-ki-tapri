@@ -44,13 +44,13 @@ Download and install Lively Wallpaper (Free & Open Source) from the [Microsoft S
    - **Production:** `https://music.codernotme.studio/wallpaper`
 4. Click **`→` (Next)**, give it a title (e.g. `Yaadon ki tapri`), and hit **OK**.
 
-### Step 3: Configure Audio Settings
+### Step 3: Continuous Background Playback
 
-1. Go to Lively **Settings ⚙️ -> Audio**.
-2. Set **Volume** to your desired background listening level.
-3. Enable **"Mute wallpaper when another application is playing audio"** (recommended for gaming/work).
+The wallpaper automatically bypasses background window unfocus and browser auto-pausing via built-in JavaScript handlers in `PlayerContext`, so music continues playing seamlessly even when working across other applications.
 
-*(Screenshots coming soon — preview captures will be added here)*
+If you ever want to tweak wallpaper audio or display settings:
+1. Go to Lively **Settings ⚙️ -> Audio** to adjust background listening volume.
+2. Click the embedded video thumbnail on the player bar anytime to open and watch the official video directly on **YouTube**.
 
 ---
 

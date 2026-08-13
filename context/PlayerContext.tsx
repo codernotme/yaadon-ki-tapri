@@ -6,6 +6,8 @@ import { Play, Pause, SkipForward, SkipBack, Volume2 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
+import { ProgressBar, formatTime } from "@/components/ui/ProgressBar";
+
 export type Song = {
   id: string;
   title: string;
@@ -21,11 +23,15 @@ type PlayerContextType = {
   currentSong: Song | null;
   isPlaying: boolean;
   queue: Song[];
+  currentTime: number;
+  duration: number;
   playSong: (song: Song, queue?: Song[]) => void;
   togglePlay: () => void;
   nextSong: () => void;
   prevSong: () => void;
   setQueue: (queue: Song[]) => void;
+  seekTo: (seconds: number) => void;
+  formatTime: (sec: number) => string;
 };
 
 const PlayerContext = createContext<PlayerContextType | null>(null);
@@ -43,7 +49,49 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const playerRef = useRef<YTPlayerType>(null);
+  const isPlayingRef = useRef(isPlaying);
   const pathname = usePathname();
+
+  useEffect(() => {
+    isPlayingRef.current = isPlaying;
+  }, [isPlaying]);
+
+  // Bypass Page Visibility & Blur background auto-pausing via JavaScript
+  useEffect(() => {
+    try {
+      Object.defineProperty(document, "hidden", {
+        get: () => false,
+        configurable: true,
+      });
+      Object.defineProperty(document, "visibilityState", {
+        get: () => "visible",
+        configurable: true,
+      });
+    } catch {
+      // Ignore if document properties are immutable in specific environments
+    }
+
+    const preventAutoPause = (e: Event) => {
+      e.stopImmediatePropagation();
+    };
+
+    window.addEventListener("visibilitychange", preventAutoPause, true);
+    window.addEventListener("blur", preventAutoPause, true);
+
+    // Lively Wallpaper background playback hook
+    (window as any).livelyWallpaperPlaybackChanged = (data: { isPaused: boolean }) => {
+      if (data && data.isPaused && isPlayingRef.current && playerRef.current) {
+        setTimeout(() => {
+          playerRef.current?.playVideo();
+        }, 100);
+      }
+    };
+
+    return () => {
+      window.removeEventListener("visibilitychange", preventAutoPause, true);
+      window.removeEventListener("blur", preventAutoPause, true);
+    };
+  }, []);
 
   const playSong = (song: Song, newQueue?: Song[]) => {
     setCurrentSong(song);
@@ -61,6 +109,13 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
     } else {
       playerRef.current?.playVideo();
       setIsPlaying(true);
+    }
+  };
+
+  const seekTo = (seconds: number) => {
+    if (playerRef.current) {
+      playerRef.current.seekTo(seconds, true);
+      setCurrentTime(seconds);
     }
   };
 
@@ -86,9 +141,22 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const onStateChange = (event: YouTubeEvent) => {
-    if (event.data === 0) nextSong();
-    else if (event.data === 1) setIsPlaying(true);
-    else if (event.data === 2) setIsPlaying(false);
+    if (event.data === 0) {
+      nextSong();
+    } else if (event.data === 1) {
+      setIsPlaying(true);
+    } else if (event.data === 2) {
+      // If paused automatically by browser/Lively unfocus while user intended to play:
+      if (isPlayingRef.current) {
+        setTimeout(() => {
+          if (isPlayingRef.current && playerRef.current) {
+            playerRef.current.playVideo();
+          }
+        }, 150);
+      } else {
+        setIsPlaying(false);
+      }
+    }
   };
 
   // Track progress timer
@@ -105,17 +173,10 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
     return () => clearInterval(interval);
   }, [isPlaying]);
 
-  const formatTime = (sec: number) => {
-    if (!sec || isNaN(sec)) return "0:00";
-    const m = Math.floor(sec / 60);
-    const s = Math.floor(sec % 60);
-    return `${m}:${s < 10 ? "0" : ""}${s}`;
-  };
-
   const showGlobalPlayer = pathname !== "/embed";
 
   return (
-    <PlayerContext.Provider value={{ currentSong, isPlaying, queue, playSong, togglePlay, nextSong, prevSong, setQueue }}>
+    <PlayerContext.Provider value={{ currentSong, isPlaying, queue, currentTime, duration, playSong, togglePlay, nextSong, prevSong, setQueue, seekTo, formatTime }}>
       {children}
       
       {currentSong && (
@@ -126,10 +187,10 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
               : "fixed -bottom-96 -right-96 opacity-0 pointer-events-none w-0 h-0 overflow-hidden"
           )}
         >
-          {/* YouTube Video Container with Watermark Badge */}
+          {/* YouTube Video Container with Watermark Badge & Clickable CTA */}
           <div className={clsx(
-            "rounded-xl overflow-hidden flex-shrink-0 bg-black relative border border-white/20 shadow-inner group",
-            showGlobalPlayer ? "w-36 md:w-44 h-24 md:h-28 pointer-events-none" : "w-0 h-0"
+            "rounded-xl overflow-hidden flex-shrink-0 bg-black relative border border-white/20 shadow-inner group cursor-pointer",
+            showGlobalPlayer ? "w-36 md:w-44 h-24 md:h-28" : "w-0 h-0"
           )}>
             <YouTube
               videoId={currentSong.youtubeId}
@@ -146,12 +207,25 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
               }}
               onReady={onReady}
               onStateChange={onStateChange}
-              className={showGlobalPlayer ? "absolute -top-[65px] -left-[60px]" : ""}
+              className={showGlobalPlayer ? "absolute -top-[65px] -left-[60px] pointer-events-none" : ""}
             />
-            {/* YouTube Badge Watermark */}
-            <div className="absolute bottom-1.5 right-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-mono text-white/90 flex items-center gap-1 border border-white/10 z-10">
-              <span className="text-red-500 font-bold">▶</span> YouTube
-            </div>
+
+            {/* Clickable CTA Link to YouTube */}
+            <a
+              href={`https://www.youtube.com/watch?v=${currentSong.youtubeId}`}
+              target="_blank"
+              rel="noreferrer"
+              className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/0 group-hover:bg-black/50 transition-all cursor-pointer p-2"
+              title={`Watch "${currentSong.title}" on YouTube`}
+            >
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 bg-red-600 hover:bg-red-700 text-white font-mono text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-xl border border-white/20">
+                <span className="text-white font-bold">▶</span> Watch on YouTube ↗
+              </div>
+
+              <div className="absolute bottom-1.5 right-2 group-hover:opacity-0 transition-opacity bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-mono text-white/90 flex items-center gap-1 border border-white/10 z-10">
+                <span className="text-red-500 font-bold">▶</span> YouTube
+              </div>
+            </a>
           </div>
 
           {/* Middle Section: Metadata, Progress Bar & Controls */}
@@ -167,17 +241,13 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
                 </p>
               </div>
 
-              {/* Progress Scrub Bar */}
-              <div className="flex items-center gap-2 font-mono text-[10px] md:text-xs text-brand-cream/60 mb-3">
-                <span>{formatTime(currentTime)}</span>
-                <div className="flex-1 h-1 bg-white/10 rounded-full overflow-hidden relative">
-                  <div 
-                    className="h-full bg-brand-rust transition-all duration-300 rounded-full"
-                    style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
-                  />
-                </div>
-                <span>{formatTime(duration)}</span>
-              </div>
+              {/* Interactive Progress Scrub Bar */}
+              <ProgressBar 
+                currentTime={currentTime} 
+                duration={duration} 
+                onSeek={seekTo} 
+                className="mb-3"
+              />
 
               {/* Controls Row */}
               <div className="flex items-center justify-between">

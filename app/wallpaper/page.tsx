@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import { usePlayer, Song } from "@/context/PlayerContext";
 import songsData from "@/data/songs.json";
 import { Radio, Disc } from "lucide-react";
+import { ProgressBar } from "@/components/ui/ProgressBar";
 
 export default function Wallpaper() {
-  const { currentSong, isPlaying, playSong } = usePlayer();
+  const { currentSong, isPlaying, playSong, currentTime, duration, seekTo } = usePlayer();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [timeStr, setTimeStr] = useState<string>("");
   const [dateStr, setDateStr] = useState<string>("");
@@ -89,7 +90,7 @@ export default function Wallpaper() {
         </p>
       </div>
 
-      {/* CENTER HERO CONTENT: Circular Emblem + Hindi Title + Subtext (Clean Wallpaper View) */}
+      {/* CENTER HERO CONTENT: Circular Emblem + Hindi Title + Subtext + Progress Slider */}
       <div 
         className="relative z-10 flex flex-col items-center justify-center h-full pb-20 px-4 text-center transition-transform duration-200 ease-out"
         style={{
@@ -106,9 +107,25 @@ export default function Wallpaper() {
           YAADON KI TAPRI
         </p>
 
-        {/* Rotation Pill Badge */}
-        <div className="inline-flex items-center gap-2 bg-black/60 text-white px-5 py-1.5 rounded-full font-mono text-xs mb-10 border border-white/20 shadow-xl backdrop-blur-sm uppercase tracking-wider">
-          <Radio size={14} className="text-brand-red animate-pulse" /> NOW PLAYING • TAPRI CLASSICS
+        {/* Rotation Pill Badge & Progress Bar */}
+        <div className="flex flex-col items-center gap-3">
+          <div className="inline-flex items-center gap-2 bg-black/60 text-white px-5 py-1.5 rounded-full font-mono text-xs border border-white/20 shadow-xl backdrop-blur-sm uppercase tracking-wider">
+            <Radio size={14} className="text-brand-red animate-pulse" /> NOW PLAYING • {currentSong?.title || "TAPRI CLASSICS"}
+          </div>
+
+          {currentSong && (
+            <div className="w-72 sm:w-96 bg-black/60 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/20 shadow-2xl">
+              <ProgressBar 
+                currentTime={currentTime} 
+                duration={duration} 
+                onSeek={seekTo} 
+                barColor="bg-brand-rust" 
+                trackColor="bg-white/20" 
+                thumbColor="bg-white" 
+                timeClassName="text-white/80 font-mono text-[11px]" 
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

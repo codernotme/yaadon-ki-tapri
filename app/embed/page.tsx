@@ -5,10 +5,11 @@ import { usePlayer, Song } from "@/context/PlayerContext";
 import { Play, Pause, SkipForward, SkipBack } from "lucide-react";
 import clsx from "clsx";
 import songsData from "@/data/songs.json";
+import { ProgressBar } from "@/components/ui/ProgressBar";
 
 export default function EmbedWidget() {
   const [expanded, setExpanded] = useState(false);
-  const { currentSong, isPlaying, togglePlay, nextSong, prevSong, playSong } = usePlayer();
+  const { currentSong, isPlaying, togglePlay, nextSong, prevSong, playSong, currentTime, duration, seekTo } = usePlayer();
 
   const handleToggleWidget = () => {
     setExpanded(!expanded);
@@ -70,6 +71,19 @@ export default function EmbedWidget() {
           {currentSong?.artist || "Yaadon Ki Tapri"}
         </p>
       </div>
+
+      {/* Interactive Progress Bar */}
+      {currentSong && (
+        <ProgressBar 
+          currentTime={currentTime}
+          duration={duration}
+          onSeek={seekTo}
+          barColor="bg-brand-rust"
+          trackColor="bg-white/10"
+          thumbColor="bg-white"
+          timeClassName="text-white/60 font-mono text-[10px]"
+        />
+      )}
 
       {/* Controls */}
       <div className="flex items-center justify-center gap-4 py-1">
