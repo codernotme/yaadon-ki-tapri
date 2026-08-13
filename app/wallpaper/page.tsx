@@ -75,15 +75,15 @@ export default function Wallpaper() {
       {/* 3. Dark Gradient Overlay */}
       <div className="absolute inset-0 z-[2] pointer-events-none bg-gradient-to-t from-black/85 via-black/35 to-black/70" />
       
-      {/* TOP LEFT HEADER: Big Clock & Date (Clean, No Social Badges / Links) */}
-      <div className="absolute top-6 left-6 md:top-8 md:left-10 z-20 flex flex-col gap-1.5">
+      {/* TOP LEFT HEADER: Big Clock & Date */}
+      <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-10 z-20 flex flex-col gap-1">
         {/* Big Time */}
-        <h2 className="font-mono text-3xl md:text-4xl text-white font-bold tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+        <h2 className="font-mono text-2xl sm:text-3xl md:text-4xl text-white font-bold tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
           {timeStr || "3:24 pm"}
         </h2>
 
         {/* Date & Timezone */}
-        <p className="font-mono text-[11px] md:text-xs text-white/70 uppercase tracking-widest font-semibold drop-shadow">
+        <p className="font-mono text-[10px] sm:text-xs text-white/70 uppercase tracking-widest font-semibold drop-shadow">
           {dateStr || "THURSDAY, 13 AUGUST · IST"}
         </p>
       </div>

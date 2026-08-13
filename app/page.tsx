@@ -92,97 +92,102 @@ export default function Home() {
       {/* 3. Dark Gradient Overlay */}
       <div className="absolute inset-0 z-[2] pointer-events-none bg-gradient-to-t from-black/85 via-black/35 to-black/70" />
       
-      {/* TOP LEFT HEADER: Big Clock, Date, Built By Badge & Social Links */}
-      <div className="absolute top-6 left-6 md:top-8 md:left-10 z-20 flex flex-col gap-2.5">
-        {/* Big Time */}
-        <h2 className="font-mono text-3xl md:text-4xl text-white font-bold tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-          {timeStr || "3:24 pm"}
-        </h2>
+      {/* RESPONSIVE HEADER BAR */}
+      <header className="absolute top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 md:top-8 md:left-10 md:right-10 z-20 flex flex-col md:flex-row justify-between items-start md:items-start gap-3 pointer-events-none">
+        {/* Left Column: Big Clock, Date, Creator Badge & Social Icons */}
+        <div className="flex flex-col gap-1.5 sm:gap-2.5 pointer-events-auto max-w-full">
+          {/* Time & Date */}
+          <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+            <h2 className="font-mono text-2xl sm:text-3xl md:text-4xl text-white font-bold tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+              {timeStr || "3:24 pm"}
+            </h2>
+            <p className="font-mono text-[10px] sm:text-xs text-white/70 uppercase tracking-widest font-semibold drop-shadow">
+              {dateStr || "THURSDAY, 13 AUGUST · IST"}
+            </p>
+          </div>
 
-        {/* Date & Timezone */}
-        <p className="font-mono text-[11px] md:text-xs text-white/70 uppercase tracking-widest font-semibold drop-shadow">
-          {dateStr || "THURSDAY, 13 AUGUST · IST"}
-        </p>
+          {/* Creator Badge & Social Icons */}
+          <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <div className="bg-black/60 backdrop-blur-md border border-white/15 px-2.5 sm:px-3 py-1 rounded-full text-white/90 font-mono text-[10px] sm:text-[11px] flex items-center gap-1.5 shadow-md">
+              <span>built by</span>
+              <a href="https://x.com/codernotme" target="_blank" rel="noreferrer" className="text-white hover:underline flex items-center gap-1">
+                <TwitterIcon size={12} /> @codernotme
+              </a>
+            </div>
 
-        {/* Creator Badge & Social Icons */}
-        <div className="flex items-center gap-2 mt-1">
-          <div className="bg-black/60 backdrop-blur-md border border-white/15 px-3 py-1 rounded-full text-white/90 font-mono text-[11px] flex items-center gap-1.5 shadow-md">
-            <span>built by</span>
-            <a href="https://x.com/codernotme" target="_blank" rel="noreferrer" className="text-white hover:underline flex items-center gap-1">
-              <TwitterIcon size={12} /> @codernotme
+            <div className="flex items-center gap-1 sm:gap-1.5">
+              <a 
+                href="https://instagram.com/codernotme" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="p-1 sm:p-1.5 bg-black/60 backdrop-blur-md border border-white/15 rounded-full text-white/80 hover:text-white hover:scale-110 transition-all shadow-md"
+                title="Instagram @codernotme"
+              >
+                <InstagramIcon size={13} />
+              </a>
+              <a 
+                href="https://github.com/codernotme" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="p-1 sm:p-1.5 bg-black/60 backdrop-blur-md border border-white/15 rounded-full text-white/80 hover:text-white hover:scale-110 transition-all shadow-md"
+                title="GitHub @codernotme"
+              >
+                <GithubIcon size={13} />
+              </a>
+              <a 
+                href="https://codernotme.studio" 
+                target="_blank" 
+                rel="noreferrer" 
+                className="p-1 sm:p-1.5 bg-black/60 backdrop-blur-md border border-white/15 rounded-full text-white/80 hover:text-white hover:scale-110 transition-all shadow-md"
+                title="Portfolio codernotme.studio"
+              >
+                <Globe size={13} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column: Navigation Pills & Support Card Box */}
+        <div className="flex flex-col items-end gap-2.5 pointer-events-auto self-end md:self-auto">
+          {/* Navigation Pills */}
+          <nav className="flex items-center gap-2">
+            <Link 
+              href="/playlists" 
+              className="bg-black/60 backdrop-blur-md border border-white/20 text-white px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-mono text-xs md:text-sm hover:bg-black/80 hover:scale-105 transition-all shadow-lg"
+            >
+              Playlists
+            </Link>
+            <Link 
+              href="/songs" 
+              className="bg-black/60 backdrop-blur-md border border-white/20 text-white px-3 sm:px-4 py-1 sm:py-1.5 rounded-full font-mono text-xs md:text-sm hover:bg-black/80 hover:scale-105 transition-all shadow-lg"
+            >
+              All songs
+            </Link>
+          </nav>
+
+          {/* Support Station Card Box (Deluxe Saloon Inspired) */}
+          <div className="hidden lg:flex flex-col items-end bg-black/75 backdrop-blur-md border border-yellow-500/30 p-3 rounded-2xl shadow-xl max-w-xs text-right gap-1.5">
+            <p className="font-mono text-[11px] text-white/90 leading-tight">
+              Help us keep this station running.<br />
+              <span className="text-white/60">Your support means a lot.</span>
+            </p>
+            <a
+              href="https://buymeacoffee.com/codernotme"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 bg-[#FFDD00] text-black font-sans font-bold text-[11px] px-3 py-1 rounded-xl shadow-md hover:scale-105 transition-transform"
+            >
+              <Coffee size={12} className="fill-black" />
+              <span>Buy Me A Coffee</span>
             </a>
           </div>
 
-          <a 
-            href="https://instagram.com/codernotme" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="p-1.5 bg-black/60 backdrop-blur-md border border-white/15 rounded-full text-white/80 hover:text-white hover:scale-110 transition-all shadow-md"
-            title="Instagram @codernotme"
-          >
-            <InstagramIcon size={14} />
-          </a>
-          <a 
-            href="https://github.com/codernotme" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="p-1.5 bg-black/60 backdrop-blur-md border border-white/15 rounded-full text-white/80 hover:text-white hover:scale-110 transition-all shadow-md"
-            title="GitHub @codernotme"
-          >
-            <GithubIcon size={14} />
-          </a>
-          <a 
-            href="https://codernotme.studio" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="p-1.5 bg-black/60 backdrop-blur-md border border-white/15 rounded-full text-white/80 hover:text-white hover:scale-110 transition-all shadow-md"
-            title="Portfolio codernotme.studio"
-          >
-            <Globe size={14} />
-          </a>
+          {/* Nostalgic Subtext Banner */}
+          <div className="bg-black/50 backdrop-blur-md border border-white/10 px-3 sm:px-3.5 py-1 rounded-full text-white/70 font-mono text-[10px] sm:text-[11px] shadow hidden sm:block">
+            Click below to enjoy your old school memories
+          </div>
         </div>
-      </div>
-
-      {/* TOP RIGHT HEADER: Playlists Navigation & Support Card Box */}
-      <div className="absolute top-6 right-6 md:top-8 md:right-10 z-20 flex flex-col items-end gap-3">
-        {/* Navigation Pills */}
-        <nav className="flex items-center gap-2">
-          <Link 
-            href="/playlists" 
-            className="bg-black/60 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full font-mono text-xs md:text-sm hover:bg-black/80 hover:scale-105 transition-all shadow-lg"
-          >
-            Playlists
-          </Link>
-          <Link 
-            href="/songs" 
-            className="bg-black/60 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full font-mono text-xs md:text-sm hover:bg-black/80 hover:scale-105 transition-all shadow-lg"
-          >
-            All songs
-          </Link>
-        </nav>
-
-        {/* Support Station Card Box (Deluxe Saloon Inspired) */}
-        <div className="hidden sm:flex flex-col items-end bg-black/75 backdrop-blur-md border border-yellow-500/30 p-3.5 rounded-2xl shadow-xl max-w-xs text-right gap-2">
-          <p className="font-mono text-xs text-white/90 leading-tight">
-            Help us keep this station running.<br />
-            <span className="text-white/60">Your support means a lot.</span>
-          </p>
-          <a
-            href="https://buymeacoffee.com/codernotme"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-[#FFDD00] text-black font-sans font-bold text-xs px-3.5 py-1.5 rounded-xl shadow-md hover:scale-105 transition-transform"
-          >
-            <Coffee size={14} className="fill-black" />
-            <span>Buy Me A Coffee</span>
-          </a>
-        </div>
-
-        {/* Nostalgic Subtext Banner */}
-        <div className="bg-black/50 backdrop-blur-md border border-white/10 px-3.5 py-1 rounded-full text-white/70 font-mono text-[11px] shadow">
-          Click below to enjoy your old school memories
-        </div>
-      </div>
+      </header>
 
       {/* CENTER HERO CONTENT: Circular Emblem + Hindi Title + Subtext + Start Button */}
       <div 
