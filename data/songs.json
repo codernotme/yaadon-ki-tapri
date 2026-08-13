@@ -1,0 +1,102 @@
+[
+  {
+    "id": "dooron-dooron",
+    "title": "Dooron Dooron",
+    "artist": "The Local Train",
+    "year": "2018",
+    "youtubeId": "L-FkL3D2Bqg",
+    "spotifyUrl": "https://open.spotify.com/track/6p5qR1c3q25m1pPZ9sHk6R",
+    "youtubeMusicUrl": "https://music.youtube.com/watch?v=L-FkL3D2Bqg",
+    "tags": ["Desi Energy"]
+  },
+  {
+    "id": "choo-lo",
+    "title": "Choo Lo",
+    "artist": "The Local Train",
+    "year": "2015",
+    "youtubeId": "s7-QO_rI2U0",
+    "spotifyUrl": "https://open.spotify.com/track/25q5X4XyN7xQZ5b5Dq7G1V",
+    "youtubeMusicUrl": "https://music.youtube.com/watch?v=s7-QO_rI2U0",
+    "tags": ["Dard", "Desi Energy"]
+  },
+  {
+    "id": "friends-theme",
+    "title": "I'll Be There For You",
+    "artist": "The Rembrandts",
+    "year": "1995",
+    "youtubeId": "q-9kPks0IfE",
+    "spotifyUrl": "https://open.spotify.com/track/4aVuWgvD0X63hcVNXW6OMj",
+    "youtubeMusicUrl": "https://music.youtube.com/watch?v=q-9kPks0IfE",
+    "tags": ["English Nostalgia"]
+  },
+  {
+    "id": "barsaat-ki-dhun",
+    "title": "Barsaat Ke Din Aaye",
+    "artist": "Kumar Sanu, Alka Yagnik",
+    "year": "2005",
+    "youtubeId": "uTz_J2XoH20",
+    "spotifyUrl": "https://open.spotify.com/track/6I5z3v8sW3Oq6iV2Lw0T9F",
+    "youtubeMusicUrl": "https://music.youtube.com/watch?v=uTz_J2XoH20",
+    "tags": ["Filmy Retro Mix"]
+  },
+  {
+    "id": "kun-faya-kun",
+    "title": "Kun Faya Kun",
+    "artist": "A.R. Rahman, Javed Ali, Mohit Chauhan",
+    "year": "2011",
+    "youtubeId": "T94PHkuydcw",
+    "spotifyUrl": "https://open.spotify.com/track/7F8c0u6O998X3hUjB5N9H3",
+    "youtubeMusicUrl": "https://music.youtube.com/watch?v=T94PHkuydcw",
+    "tags": ["Bhakti Break"]
+  },
+  {
+    "id": "mitwa",
+    "title": "Mitwa",
+    "artist": "Shafqat Amanat Ali, Shankar Mahadevan, Caralisa Monteiro",
+    "year": "2006",
+    "youtubeId": "QkF3mP6D-qY",
+    "spotifyUrl": "https://open.spotify.com/track/4Wf8T2fX9O8v8aK3O7f8kO",
+    "youtubeMusicUrl": "https://music.youtube.com/watch?v=QkF3mP6D-qY",
+    "tags": ["Filmy Retro Mix"]
+  },
+  {
+    "id": "aankhon-mein-tera-hi-chehra",
+    "title": "Aankhon Mein Tera Hi Chehra",
+    "artist": "Aryans",
+    "year": "1999",
+    "youtubeId": "3oT5e_l_qG8",
+    "spotifyUrl": "https://open.spotify.com/track/5c8s1Q7tH0X7M5H9n9rW3k",
+    "youtubeMusicUrl": "https://music.youtube.com/watch?v=3oT5e_l_qG8",
+    "tags": ["Desi Energy"]
+  },
+  {
+    "id": "purani-jeans",
+    "title": "Purani Jeans",
+    "artist": "Ali Haider",
+    "year": "1993",
+    "youtubeId": "5V2qB7Xq0YQ",
+    "spotifyUrl": "https://open.spotify.com/track/0Xy8L4R9uG3m8Y6Q8D8X9T",
+    "youtubeMusicUrl": "https://music.youtube.com/watch?v=5V2qB7Xq0YQ",
+    "tags": ["Desi Energy", "Dard"]
+  },
+  {
+    "id": "somewhere-only-we-know",
+    "title": "Somewhere Only We Know",
+    "artist": "Keane",
+    "year": "2004",
+    "youtubeId": "Oextk-If8HQ",
+    "spotifyUrl": "https://open.spotify.com/track/0LLv48D78N8Wd3y9K8Hk2E",
+    "youtubeMusicUrl": "https://music.youtube.com/watch?v=Oextk-If8HQ",
+    "tags": ["English Nostalgia", "Dard"]
+  },
+  {
+    "id": "tadap-tadap",
+    "title": "Tadap Tadap",
+    "artist": "KK, Dominique Cerejo",
+    "year": "1999",
+    "youtubeId": "B-B3A92Qe9w",
+    "spotifyUrl": "https://open.spotify.com/track/0m8h0mQ5qK8L7J3D9T7C2L",
+    "youtubeMusicUrl": "https://music.youtube.com/watch?v=B-B3A92Qe9w",
+    "tags": ["Dard", "Filmy Retro Mix"]
+  }
+]

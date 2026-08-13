@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-sniglet), "Comic Sans MS", cursive, sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand-cream: #EFE3C8;
+  --color-brand-red: #B5533C;
+  --color-brand-teal: #5B8C87;
+  --color-brand-black: #2B2118;
+  --color-brand-gray: #6E6255;
+  --color-brand-yellow: #D9A441;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-black);
+  /* The display font is for headers usually, but the prompt says: 
+   * "display font for headers... paired with a clean monospace for metadata... body font for song titles"
+   * Actually wait, let me set the base to sans, and I'll use mono for metadata.
+   */
 }
+
+/* Noise overlay */
+.noise-bg {
+  position: relative;
+}
+
+.noise-bg::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.25;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-teal);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-red);
+}
+
+/* Cassette spin animation */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+/* Equalizer animation */
+@keyframes eq-bar {
+  0% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+  100% { transform: scaleY(0.3); }
+}
+.animate-eq {
+  animation: eq-bar 1s ease-in-out infinite;
+  transform-origin: bottom;
+}
+.animate-eq-delay-1 { animation-delay: 0.1s; }
+.animate-eq-delay-2 { animation-delay: 0.3s; }
+.animate-eq-delay-3 { animation-delay: 0.5s; }
+.animate-eq-delay-4 { animation-delay: 0.2s; }
