@@ -79,7 +79,7 @@ export default function Home() {
     <div className="relative w-screen h-screen overflow-hidden bg-brand-black select-none">
       {/* 1. Dynamic Parallax Background Image */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-out"
+        className="absolute -inset-10 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-300 ease-out"
         style={{ 
           backgroundImage: "url('/background/bg_1.png')",
           transform: `translate(${-mousePos.x * 0.8}px, ${-mousePos.y * 0.8}px) scale(${isPlaying ? 1.08 : 1.05})`
@@ -87,10 +87,10 @@ export default function Home() {
       />
 
       {/* 2. VHS Scanline Overlay */}
-      <div className="absolute inset-0 z-[1] pointer-events-none vhs-scanlines opacity-35" />
+      <div className="absolute -inset-10 z-[1] pointer-events-none vhs-scanlines opacity-35" />
       
       {/* 3. Dark Gradient Overlay */}
-      <div className="absolute inset-0 z-[2] pointer-events-none bg-gradient-to-t from-black/85 via-black/35 to-black/70" />
+      <div className="absolute -inset-10 z-[2] pointer-events-none bg-gradient-to-t from-black/85 via-black/35 to-black/70" />
       
       {/* RESPONSIVE HEADER BAR */}
       <header className="absolute top-4 left-4 right-4 sm:top-6 sm:left-6 sm:right-6 md:top-8 md:left-10 md:right-10 z-20 flex flex-col md:flex-row justify-between items-start md:items-start gap-3 pointer-events-none">
@@ -191,13 +191,13 @@ export default function Home() {
 
       {/* CENTER HERO CONTENT: Circular Emblem + Hindi Title + Subtext + Start Button */}
       <div 
-        className="relative z-10 flex flex-col items-center justify-center h-full pb-20 px-4 text-center transition-transform duration-200 ease-out"
+        className="relative z-10 flex flex-col items-center justify-center h-full pt-24 sm:pt-0 pb-10 sm:pb-20 px-4 text-center transition-transform duration-200 ease-out"
         style={{
           transform: `translate(${mousePos.x * 0.4}px, ${mousePos.y * 0.4}px)`
         }}
       >
         {/* Hindi Title: यादों की टपरी */}
-        <h1 className="font-hindi text-6xl sm:text-8xl lg:text-9xl text-brand-cream drop-shadow-[6px_6px_0_#B5533C] mb-2 tracking-wide leading-none">
+        <h1 className="font-hindi text-5xl sm:text-8xl lg:text-9xl text-brand-cream drop-shadow-[4px_4px_0_#B5533C] sm:drop-shadow-[6px_6px_0_#B5533C] mb-2 tracking-wide leading-none">
           यादों की टपरी
         </h1>
 

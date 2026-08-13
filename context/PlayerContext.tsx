@@ -187,12 +187,34 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
       {children}
       
       {currentSong && showGlobalPlayer && (
-        <>
+        <div className="fixed inset-x-0 bottom-0 pointer-events-none z-50 flex justify-center items-end">
+          {/* ALWAYS-MOUNTED SINGLE YOUTUBE PLAYER CONTAINER (Never unmounts, audio keeps playing smoothly) */}
+          <div className="fixed -bottom-[999px] -left-[999px] opacity-0 pointer-events-none w-1 h-1 overflow-hidden">
+            <YouTube
+              videoId={currentSong.youtubeId}
+              opts={{
+                height: '260',
+                width: '350',
+                playerVars: {
+                  autoplay: 1,
+                  controls: 0,
+                  disablekb: 1,
+                  fs: 0,
+                  modestbranding: 1,
+                  rel: 0,
+                  iv_load_policy: 3,
+                },
+              }}
+              onReady={onReady}
+              onStateChange={onStateChange}
+            />
+          </div>
+
           {/* COLLAPSED MINI PLAYER BAR */}
           {isCollapsed ? (
             <div 
               onClick={() => setIsCollapsed(false)}
-              className="fixed bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 sm:gap-3.5 bg-[#151210]/95 backdrop-blur-2xl border border-white/20 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.85)] max-w-[92vw] sm:max-w-md transition-all animate-in slide-in-from-bottom-4 cursor-pointer group hover:border-white/40"
+              className="pointer-events-auto mb-3 sm:mb-6 flex items-center gap-2.5 sm:gap-3.5 bg-[#151210]/95 backdrop-blur-2xl border border-white/20 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.85)] max-w-[92vw] sm:max-w-md transition-all animate-in slide-in-from-bottom-4 cursor-pointer group hover:border-white/40"
             >
               {/* Disc Indicator */}
               <div className={clsx("w-8 h-8 rounded-full border border-brand-yellow/80 overflow-hidden flex items-center justify-center bg-black flex-shrink-0", isPlaying ? "animate-spin-slow" : "")}>
@@ -239,7 +261,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
           ) : (
             /* EXPANDED FULL PLAYER CARD */
             <div 
-              className="fixed bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col md:flex-row items-center bg-[#151210]/95 backdrop-blur-2xl border border-white/15 p-3.5 sm:p-4 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.85)] gap-3 md:gap-6 w-[94%] max-w-[800px] transition-all animate-in slide-in-from-bottom-8 relative"
+              className="pointer-events-auto mb-3 sm:mb-6 flex flex-col md:flex-row items-center bg-[#151210]/95 backdrop-blur-2xl border border-white/15 p-3.5 sm:p-4 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.85)] gap-3 md:gap-6 w-[94%] max-w-[800px] transition-all animate-in slide-in-from-bottom-8 relative"
             >
               {/* Collapse/Minimize Button */}
               <button
@@ -250,36 +272,20 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
                 <ChevronDown size={18} />
               </button>
 
-              {/* YouTube Video Container */}
+              {/* YouTube Video / Thumbnail Container */}
               <div className="w-full md:w-44 h-32 md:h-28 rounded-xl overflow-hidden flex-shrink-0 bg-black relative border border-white/20 shadow-inner group cursor-pointer">
-                <div className="absolute inset-0 scale-125 origin-center pointer-events-none overflow-hidden">
-                  <YouTube
-                    videoId={currentSong.youtubeId}
-                    opts={{
-                      height: '260',
-                      width: '350',
-                      playerVars: {
-                        autoplay: 1,
-                        controls: 0,
-                        disablekb: 1,
-                        fs: 0,
-                        modestbranding: 1,
-                        rel: 0,
-                        iv_load_policy: 3,
-                      },
-                    }}
-                    onReady={onReady}
-                    onStateChange={onStateChange}
-                    className="absolute -top-[70px] -left-[65px]"
-                  />
-                </div>
+                <img 
+                  src={`https://img.youtube.com/vi/${currentSong.youtubeId}/hqdefault.jpg`} 
+                  alt={currentSong.title}
+                  className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-300"
+                />
 
                 {/* Clickable CTA Link to YouTube */}
                 <a
                   href={`https://www.youtube.com/watch?v=${currentSong.youtubeId}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/0 group-hover:bg-black/50 transition-all cursor-pointer p-2"
+                  className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/20 group-hover:bg-black/55 transition-all cursor-pointer p-2"
                   title={`Watch "${currentSong.title}" on YouTube`}
                 >
                   <div className="opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 bg-red-600 hover:bg-red-700 text-white font-mono text-[10px] md:text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-xl border border-white/20 whitespace-nowrap">
@@ -363,7 +369,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
               </div>
             </div>
           )}
-        </>
+        </div>
       )}
     </PlayerContext.Provider>
   );
