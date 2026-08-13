@@ -148,13 +148,13 @@ export default function Home() {
         {/* Navigation Pills */}
         <nav className="flex items-center gap-2">
           <Link 
-            href="/browse" 
+            href="/playlists" 
             className="bg-black/60 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full font-mono text-xs md:text-sm hover:bg-black/80 hover:scale-105 transition-all shadow-lg"
           >
             Playlists
           </Link>
           <Link 
-            href="/browse?tab=All" 
+            href="/songs" 
             className="bg-black/60 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full font-mono text-xs md:text-sm hover:bg-black/80 hover:scale-105 transition-all shadow-lg"
           >
             All songs

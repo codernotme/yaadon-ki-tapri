@@ -112,7 +112,7 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
     return `${m}:${s < 10 ? "0" : ""}${s}`;
   };
 
-  const showGlobalPlayer = pathname === "/" || pathname === "/browse" || pathname === "/wallpaper";
+  const showGlobalPlayer = pathname !== "/embed";
 
   return (
     <PlayerContext.Provider value={{ currentSong, isPlaying, queue, playSong, togglePlay, nextSong, prevSong, setQueue }}>
