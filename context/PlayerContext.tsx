@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useRef, useEffect } from "react";
 import YouTube, { YouTubeEvent, YouTubePlayer as YTPlayerType } from "react-youtube";
-import { Play, Pause, SkipForward, SkipBack } from "lucide-react";
+import { Play, Pause, SkipForward, SkipBack, Volume2 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
@@ -40,6 +40,8 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
   const [currentSong, setCurrentSong] = useState<Song | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [queue, setQueue] = useState<Song[]>([]);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
   const playerRef = useRef<YTPlayerType>(null);
   const pathname = usePathname();
 
@@ -89,7 +91,27 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
     else if (event.data === 2) setIsPlaying(false);
   };
 
-  // Only show the big player card on the main site pages
+  // Track progress timer
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isPlaying) {
+      interval = setInterval(() => {
+        if (playerRef.current) {
+          setCurrentTime(playerRef.current.getCurrentTime() || 0);
+          setDuration(playerRef.current.getDuration() || 0);
+        }
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying]);
+
+  const formatTime = (sec: number) => {
+    if (!sec || isNaN(sec)) return "0:00";
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return `${m}:${s < 10 ? "0" : ""}${s}`;
+  };
+
   const showGlobalPlayer = pathname === "/" || pathname === "/browse";
 
   return (
@@ -100,20 +122,20 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
         <div 
           className={clsx(
             showGlobalPlayer 
-              ? "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center bg-black/60 backdrop-blur-xl border border-white/10 p-3 rounded-2xl shadow-2xl gap-4 w-[90%] max-w-[600px] transition-transform animate-in slide-in-from-bottom-10"
+              ? "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex flex-col md:flex-row items-center bg-[#151210]/95 backdrop-blur-2xl border border-white/15 p-4 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.85)] gap-4 md:gap-6 w-[94%] max-w-[800px] transition-all animate-in slide-in-from-bottom-12"
               : "fixed -bottom-96 -right-96 opacity-0 pointer-events-none w-0 h-0 overflow-hidden"
           )}
         >
-          {/* YouTube Video Container */}
+          {/* YouTube Video Container with Watermark Badge (Deluxe Saloon Inspired) */}
           <div className={clsx(
-            "rounded-lg overflow-hidden flex-shrink-0 bg-black relative",
-            showGlobalPlayer ? "w-24 h-[54px] shadow-inner pointer-events-none" : "w-0 h-0"
+            "rounded-xl overflow-hidden flex-shrink-0 bg-black relative border border-white/20 shadow-inner group",
+            showGlobalPlayer ? "w-36 md:w-44 h-24 md:h-28 pointer-events-none" : "w-0 h-0"
           )}>
             <YouTube
               videoId={currentSong.youtubeId}
               opts={{
-                height: showGlobalPlayer ? '150' : '10',
-                width: showGlobalPlayer ? '200' : '10',
+                height: showGlobalPlayer ? '240' : '10',
+                width: showGlobalPlayer ? '320' : '10',
                 playerVars: {
                   autoplay: 1,
                   controls: 0,
@@ -124,49 +146,90 @@ export const PlayerProvider = ({ children }: { children: React.ReactNode }) => {
               }}
               onReady={onReady}
               onStateChange={onStateChange}
-              className={showGlobalPlayer ? "absolute -top-[48px] -left-[52px]" : ""}
+              className={showGlobalPlayer ? "absolute -top-[65px] -left-[60px]" : ""}
             />
+            {/* YouTube Badge Watermark */}
+            <div className="absolute bottom-1.5 right-2 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-mono text-white/90 flex items-center gap-1 border border-white/10 z-10">
+              <span className="text-red-500 font-bold">▶</span> YouTube
+            </div>
           </div>
 
-          {/* Rest of the UI (Only rendered if showGlobalPlayer is true) */}
+          {/* Middle Section: Metadata, Progress Bar & Controls */}
           {showGlobalPlayer && (
-            <>
-              {/* Track Info */}
-              <div className="flex-1 min-w-0 flex flex-col justify-center">
-                <h3 className="font-sans text-brand-cream text-lg font-semibold truncate leading-tight">
+            <div className="flex-1 min-w-0 flex flex-col justify-between w-full">
+              {/* Song Title & Artist */}
+              <div className="mb-2">
+                <h3 className="font-hindi text-xl md:text-2xl font-bold text-brand-cream truncate leading-tight tracking-wide">
                   {currentSong.title}
                 </h3>
-                <p className="font-mono text-brand-cream/60 text-xs truncate">
+                <p className="font-mono text-xs md:text-sm text-brand-cream/70 truncate mt-0.5">
                   {currentSong.artist} • {currentSong.year}
                 </p>
               </div>
 
-              {/* Controls */}
-              <div className="flex items-center gap-2 pr-2">
-                <button onClick={prevSong} className="p-2 text-brand-cream/80 hover:text-white transition-colors">
-                  <SkipBack size={20} className="fill-current" />
-                </button>
-                <button 
-                  onClick={togglePlay}
-                  className="p-3 bg-brand-cream text-brand-black rounded-full hover:scale-105 transition-transform"
-                >
-                  {isPlaying ? <Pause size={20} className="fill-current" /> : <Play size={20} className="fill-current ml-0.5" />}
-                </button>
-                <button onClick={nextSong} className="p-2 text-brand-cream/80 hover:text-white transition-colors">
-                  <SkipForward size={20} className="fill-current" />
-                </button>
+              {/* Progress Scrub Bar */}
+              <div className="flex items-center gap-2 font-mono text-[10px] md:text-xs text-brand-cream/60 mb-3">
+                <span>{formatTime(currentTime)}</span>
+                <div className="flex-1 h-1 bg-white/10 rounded-full overflow-hidden relative">
+                  <div 
+                    className="h-full bg-brand-rust transition-all duration-300 rounded-full"
+                    style={{ width: `${duration ? (currentTime / duration) * 100 : 0}%` }}
+                  />
+                </div>
+                <span>{formatTime(duration)}</span>
               </div>
-              
-              {/* External Links */}
-              <div className="hidden md:flex flex-col gap-1 border-l border-white/20 pl-4">
-                <a href={currentSong.spotifyUrl} target="_blank" rel="noreferrer" className="text-[10px] font-mono text-brand-cream/60 hover:text-brand-cream transition-colors flex items-center gap-1">
-                  Spotify ↗
-                </a>
-                <a href={currentSong.youtubeMusicUrl} target="_blank" rel="noreferrer" className="text-[10px] font-mono text-brand-cream/60 hover:text-brand-cream transition-colors flex items-center gap-1">
-                  YT Music ↗
-                </a>
+
+              {/* Controls Row */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <button 
+                    onClick={prevSong} 
+                    className="p-1.5 text-brand-cream/80 hover:text-white hover:scale-110 active:scale-95 transition-all"
+                    title="Previous Song"
+                  >
+                    <SkipBack size={20} className="fill-current" />
+                  </button>
+
+                  <button 
+                    onClick={togglePlay}
+                    className="p-3 bg-brand-cream text-brand-black rounded-full hover:scale-110 hover:bg-white active:scale-95 transition-all shadow-md"
+                    title={isPlaying ? "Pause" : "Play"}
+                  >
+                    {isPlaying ? <Pause size={20} className="fill-current" /> : <Play size={20} className="fill-current ml-0.5" />}
+                  </button>
+
+                  <button 
+                    onClick={nextSong} 
+                    className="p-1.5 text-brand-cream/80 hover:text-white hover:scale-110 active:scale-95 transition-all"
+                    title="Next Song"
+                  >
+                    <SkipForward size={20} className="fill-current" />
+                  </button>
+
+                  <Volume2 size={16} className="text-brand-cream/40 ml-2 hidden sm:block" />
+                </div>
+
+                {/* External Streaming Link Pills */}
+                <div className="flex items-center gap-2 font-mono text-[11px]">
+                  <a 
+                    href={currentSong.spotifyUrl} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="px-3 py-1 bg-white/5 border border-white/15 rounded-full text-brand-cream/80 hover:text-white hover:bg-white/15 transition-all"
+                  >
+                    Spotify ↗
+                  </a>
+                  <a 
+                    href={currentSong.youtubeMusicUrl} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="px-3 py-1 bg-white/5 border border-white/15 rounded-full text-brand-cream/80 hover:text-white hover:bg-white/15 transition-all"
+                  >
+                    YT Music ↗
+                  </a>
+                </div>
               </div>
-            </>
+            </div>
           )}
         </div>
       )}

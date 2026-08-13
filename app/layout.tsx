@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
-import { Sniglet, Space_Mono } from "next/font/google";
+import { Yatra_One, Sniglet, Space_Mono } from "next/font/google";
 import "./globals.css";
 import { PlayerProvider } from "@/context/PlayerContext";
+
+const yatraOne = Yatra_One({
+  weight: "400",
+  variable: "--font-yatra",
+  subsets: ["devanagari", "latin"],
+});
 
 const sniglet = Sniglet({
   weight: "400",
@@ -16,8 +22,8 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nukkad Radio",
-  description: "the songs playing at every nukkad, every evening.",
+  title: "यादों की टपरी | Yaadon Ki Tapri — 90s-2000s Retro Radio",
+  description: "the songs playing at every nukkad, every evening. A nostalgic 90s-2000s Indian pop culture radio player by codernotme.",
 };
 
 export default function RootLayout({
@@ -27,8 +33,8 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
-      className={`${sniglet.variable} ${spaceMono.variable} h-full antialiased font-sans text-brand-black bg-brand-cream`}
+      lang="hi"
+      className={`${yatraOne.variable} ${sniglet.variable} ${spaceMono.variable} h-full antialiased font-sans text-brand-black bg-brand-cream`}
     >
       <body className="min-h-full flex flex-col noise-bg">
         <PlayerProvider>

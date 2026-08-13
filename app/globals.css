@@ -3,6 +3,7 @@
 @theme {
   --font-sans: var(--font-sniglet), "Comic Sans MS", cursive, sans-serif;
   --font-mono: var(--font-space-mono), monospace;
+  --font-hindi: var(--font-yatra), serif;
 
   --color-brand-cream: #EFE3C8;
   --color-brand-red: #B5533C;
@@ -12,13 +13,13 @@
   --color-brand-yellow: #D9A441;
 }
 
+.font-hindi {
+  font-family: var(--font-yatra), var(--font-sniglet), serif;
+}
+
 body {
   background-color: var(--color-brand-cream);
   color: var(--color-brand-black);
-  /* The display font is for headers usually, but the prompt says: 
-   * "display font for headers... paired with a clean monospace for metadata... body font for song titles"
-   * Actually wait, let me set the base to sans, and I'll use mono for metadata.
-   */
 }
 
 /* Noise overlay */
@@ -35,7 +36,7 @@ body {
   height: 100vh;
   pointer-events: none;
   z-index: 50;
-  opacity: 0.25;
+  opacity: 0.2;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
@@ -77,3 +78,17 @@ body {
 .animate-eq-delay-2 { animation-delay: 0.3s; }
 .animate-eq-delay-3 { animation-delay: 0.5s; }
 .animate-eq-delay-4 { animation-delay: 0.2s; }
+
+/* Scanline texture */
+.vhs-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+}
